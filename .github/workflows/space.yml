@@ -68,7 +68,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: check_program_compilation
     if: success()
-    if: push()
+    if: pushed()
     steps:
       - uses: actions/checkout@v3
         with:
