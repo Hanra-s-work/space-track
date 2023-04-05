@@ -24,41 +24,42 @@ jobs:
 
   check_coding_style:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-      - name: Launch coding-style
-        run: |
-          chmod +x ./$CHECK_CODING_STYLE
-          ./$CHECK_CODING_STYLE $(pwd) $(pwd)
-      - name: Checking the results
-        run: |
-          chmod +x ./$DISPLAY
-          ./$DISPLAY && exit $? || exit 1
+      steps:
+        - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+        - name: Launch coding-style
+          run: |
+            chmod +x ./$CHECK_CODING_STYLE
+            ./$CHECK_CODING_STYLE $(pwd) $(pwd)
+        - name: Checking the results
+          run: |
+            chmod +x ./$DISPLAY
+            ./$DISPLAY && exit $? || exit 1
   
   check_program_compilation:
     runs-on: ubuntu-latest
     needs: check_coding_style
     # if: success()
     timeout-minutes: 4
-    - name: Pull Docker image
-      run: sudo docker pull epitechcontent/epitest-docker
-    - name: Launch code
-      run: |
-        cat -e main.c
-        chmod +x ./$LAUNCH_CODE
-        ./$LAUNCH_CODE "make && exit $? || exit 1"
-    - name: Clean folder
-      run: ./$LAUNCH_CODE "make clean && exit $? || exit 1"
-    - name: Check binary
-      run: |
-        IFS=',' read -ra VARS <<< "${EXECUTABLES}"
-        ./$LAUNCH_CODE "chmod +x ./${CHECK_BINARY} && ./${CHECK_BINARY} ${VARS[@]} && exit $? || exit 1"
-    - name: Check execution
-      run: |
-        IFS=',' read -ra VARS <<< "${EXECUTABLES}"
-        ./$LAUNCH_CODE "chmod +x ./${CHECK_EXECUTION} && ./${CHECK_EXECUTION} ${VARS[@]} && exit $? || exit 1"
+    steps:
+      - name: Pull Docker image
+        run: sudo docker pull epitechcontent/epitest-docker
+      - name: Launch code
+        run: |
+          cat -e main.c
+          chmod +x ./$LAUNCH_CODE
+          ./$LAUNCH_CODE "make && exit $? || exit 1"
+      - name: Clean folder
+        run: ./$LAUNCH_CODE "make clean && exit $? || exit 1"
+      - name: Check binary
+        run: |
+          IFS=',' read -ra VARS <<< "${EXECUTABLES}"
+          ./$LAUNCH_CODE "chmod +x ./${CHECK_BINARY} && ./${CHECK_BINARY} ${VARS[@]} && exit $? || exit 1"
+      - name: Check execution
+        run: |
+          IFS=',' read -ra VARS <<< "${EXECUTABLES}"
+          ./$LAUNCH_CODE "chmod +x ./${CHECK_EXECUTION} && ./${CHECK_EXECUTION} ${VARS[@]} && exit $? || exit 1"
 
   push_to_mirror:
     runs-on: ubuntu-latest
@@ -66,11 +67,11 @@ jobs:
     # if: success()
     # if: push()
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-    - name: Push all files to the mirror repository
-      uses: pixta-dev/repository-mirroring-action@v1
-      with:
-        target_repo_url: git@github.com:${{ env.REPO_MIRROR }}.git
-        ssh_private_key: ${{ env.GITHUB_SSH_KEY }}
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Push all files to the mirror repository
+        uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url: git@github.com:${{ env.REPO_MIRROR }}.git
+          ssh_private_key: ${{ env.GITHUB_SSH_KEY }}
