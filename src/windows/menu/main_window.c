@@ -8,7 +8,8 @@
 #include "struct.h"
 #include "rpg.h"
 
-void draw_buttons_and_sprite(btn_t *btn, win_t *win, spt_t *spt) {
+void draw_buttons_and_sprite(btn_t *btn, win_t *win, spt_t *spt)
+{
     sfRenderWindow_drawSprite(win[0].win, spt[0].sprite, NULL);
     draw_button(win, btn);
 }

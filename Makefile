@@ -6,14 +6,19 @@
 ##
 
 SRC 	=	./src/main.c \
-			./src/windows/menu/main_window.c	\
-			./src/windows/menu/create_menu_win.c	\
-			./src/actions/action_menu_page.c	\
-			./src/sprites/sprite_menu_page.c	\
-			./src/buttons/create_button.c	\
-			./src/buttons/draw_buttons.c	\
-			./src/init_elements/init_button.c	\
 			./src/free_struct.c	\
+
+SRC		+=	./src/windows/menu/main_window.c	\
+			./src/windows/menu/create_menu_win.c	\
+
+SRC		+=	./src/actions/action_menu_page.c	\
+
+SRC		+=	./src/sprites/sprite_menu_page.c	\
+
+SRC		+=	./src/buttons/create_button.c	\
+			./src/buttons/draw_buttons.c	\
+
+SRC		+=	./src/init_elements/init_button.c	\
 
 CC 		=	gcc
 

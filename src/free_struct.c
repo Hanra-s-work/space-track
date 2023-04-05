@@ -12,7 +12,9 @@
 
 void destroy(win_t *win, spt_t *spt, btn_t *btn)
 {
-    sfRectangleShape_destroy(btn[0].rect);
+    for (int i = 0; i <= 3; i++) {
+        sfRectangleShape_destroy(btn[0].rect);
+    }
     sfRenderWindow_destroy(win[0].win);
     sfSprite_destroy(spt[0].sprite);
     sfTexture_destroy(spt[0].texture);
