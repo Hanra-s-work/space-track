@@ -5,20 +5,21 @@
 ## mul
 ##
 
-SRC 	=	./src/main.c \
-			./src/free_struct.c	\
+SRC 	=	./src/main.c 							\
+			./src/free_struct.c						\
 
-SRC		+=	./src/windows/menu/main_window.c	\
-			./src/windows/menu/create_menu_win.c	\
+SRC		+=	./src/windows/menu/main_window.c		\
+			./src/windows/credit/credit_window.c	\
+			./src/windows/create_win.c				\
 
-SRC		+=	./src/actions/action_menu_page.c	\
+SRC		+=	./src/actions/action_menu_page.c		\
 
-SRC		+=	./src/sprites/sprite_menu_page.c	\
+SRC		+=	./src/sprites/sprite_menu_page.c		\
 
-SRC		+=	./src/buttons/create_button.c	\
-			./src/buttons/draw_buttons.c	\
+SRC		+=	./src/buttons/create_button.c			\
+			./src/buttons/draw_buttons.c			\
 
-SRC		+=	./src/init_elements/init_button.c	\
+SRC		+=	./src/init_elements/init_button.c		\
 
 CC 		=	gcc
 

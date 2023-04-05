@@ -13,11 +13,19 @@
 void destroy(win_t *win, spt_t *spt, btn_t *btn);
 void free_struct(win_t *win, spt_t *spt, btn_t *btn);
 
-// menu page
+// window
 int main_window(win_t *win, spt_t *spt, btn_t *btn);
-void action_main_window(win_t *win);
+int credit_page(win_t *win, spt_t *spt);
+
+// action
+void action_main_window(win_t *win, spt_t *spt);
+
+// sprite
 void set_sprite_background(spt_t *spt);
+
+// create page
 void created_main_window(win_t *win, spt_t *spt);
+void created_credit_window(win_t *win, spt_t *spt);
 
 //init element
 void init_media(btn_t *btn);

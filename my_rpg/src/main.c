@@ -11,7 +11,7 @@
 
 int main(int ac, char **av)
 {
-    win_t *win = malloc(sizeof(win_t) * 1);
+    win_t *win = malloc(sizeof(win_t) * 2);
     spt_t *spt = malloc(sizeof(spt_t) * 1);
     btn_t *btn = malloc(sizeof(btn_t) * 4);
 
