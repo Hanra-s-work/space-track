@@ -50,7 +50,6 @@ jobs:
       run: sudo docker pull epitechcontent/epitest-docker
     - name: Launch code
       run: |
-        cat -e main.c
         chmod +x ./$LAUNCH_CODE
         ./$LAUNCH_CODE "make && exit $? || exit 1"
     - name: Clean folder
