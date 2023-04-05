@@ -1,0 +1,9 @@
+*.o
+*.log
+*#
+*~
+vgcore.*
+*.a
+*.DS_Store
+my_rpg
+.vscode
