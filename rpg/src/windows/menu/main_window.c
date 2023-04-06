@@ -19,7 +19,7 @@ int main_window(win_t *win, spt_t *spt, btn_t *btn)
     created_main_window(win, spt);
     init_media(btn);
     while (sfRenderWindow_isOpen(win[0].win)) {
-        action_main_window(win, spt);
+        action_main_window(win, spt, btn);
         sfRenderWindow_clear(win[0].win, sfWhite);
         draw_buttons_and_sprite(btn, win, spt);
         sfRenderWindow_display(win[0].win);

@@ -9,9 +9,10 @@ SRC 	=	./src/main.c 							\
 			./src/free_struct.c						\
 
 SRC		+=	./src/windows/menu/main_window.c		\
-			./src/windows/credit/credit_window.c	\
-			./src/windows/create_win.c				\
+			./src/windows/menu/credit/credit_window.c	\
 			./src/windows/game/game_window.c		\
+			./src/windows/game/setting/setting_window.c		\
+			./src/windows/create_win.c				\
 
 SRC		+=	./src/actions/action_menu_page.c		\
 			./src/actions/action_game_page.c		\

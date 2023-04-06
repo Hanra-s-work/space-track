@@ -43,3 +43,16 @@ void created_game_window(win_t *win)
     win[2].mode.bitsPerPixel = 32;
     win[2].win = sfRenderWindow_create(win[2].mode, name, sfrc, NULL);
 }
+
+void created_setting_window(win_t *win)
+{
+    sfUint32 sfrc = sfClose;
+    char const name[8] = "Setting";
+    sfVector2i pos_win = {800, 320};
+
+    win[3].mode.width = 320;
+    win[3].mode.height = 600;
+    win[3].mode.bitsPerPixel = 32;
+    win[3].win = sfRenderWindow_create(win[3].mode, name, sfrc, NULL);
+    sfRenderWindow_setPosition(win[3].win, pos_win);
+}
