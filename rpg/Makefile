@@ -11,8 +11,10 @@ SRC 	=	./src/main.c 							\
 SRC		+=	./src/windows/menu/main_window.c		\
 			./src/windows/credit/credit_window.c	\
 			./src/windows/create_win.c				\
+			./src/windows/game/game_window.c		\
 
 SRC		+=	./src/actions/action_menu_page.c		\
+			./src/actions/action_game_page.c		\
 
 SRC		+=	./src/sprites/sprite_menu_page.c		\
 

@@ -32,3 +32,14 @@ void created_credit_window(win_t *win, spt_t *spt)
     win[1].win = sfRenderWindow_create(win[1].mode, name, sfrc, NULL);
     sfRenderWindow_setPosition(win[1].win, pos_win);
 }
+
+void created_game_window(win_t *win)
+{
+    sfUint32 sfrc = sfClose;
+    char const name[11] = "SpaceTrack";
+
+    win[2].mode.width = 1920;
+    win[2].mode.height = 1080;
+    win[2].mode.bitsPerPixel = 32;
+    win[2].win = sfRenderWindow_create(win[2].mode, name, sfrc, NULL);
+}

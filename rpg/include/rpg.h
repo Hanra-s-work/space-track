@@ -16,9 +16,11 @@ void free_struct(win_t *win, spt_t *spt, btn_t *btn);
 // window
 int main_window(win_t *win, spt_t *spt, btn_t *btn);
 int credit_page(win_t *win, spt_t *spt);
+int game_window(win_t *win);
 
 // action
 void action_main_window(win_t *win, spt_t *spt);
+void action_game_window(win_t *win);
 
 // sprite
 void set_sprite_background(spt_t *spt);
@@ -26,6 +28,7 @@ void set_sprite_background(spt_t *spt);
 // create page
 void created_main_window(win_t *win, spt_t *spt);
 void created_credit_window(win_t *win, spt_t *spt);
+void created_game_window(win_t *win);
 
 //init element
 void init_media(btn_t *btn);

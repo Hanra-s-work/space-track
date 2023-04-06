@@ -26,4 +26,5 @@ int credit_page(win_t *win, spt_t *spt)
         sfRenderWindow_display(win[1].win);
     }
     sfRenderWindow_destroy(win[1].win);
+    return 0;
 }
