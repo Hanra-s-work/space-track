@@ -56,3 +56,14 @@ void created_setting_window(win_t *win)
     win[3].win = sfRenderWindow_create(win[3].mode, name, sfrc, NULL);
     sfRenderWindow_setPosition(win[3].win, pos_win);
 }
+
+void created_inventory_window(win_t *win)
+{
+    sfUint32 sfrc = sfClose;
+    char const name[7] = "My_RPG";
+
+    win[4].mode.width = 920;
+    win[4].mode.height = 680;
+    win[4].mode.bitsPerPixel = 32;
+    win[4].win = sfRenderWindow_create(win[4].mode, name, sfrc, NULL);
+}

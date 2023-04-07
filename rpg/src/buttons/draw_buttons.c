@@ -20,3 +20,9 @@ void draw_button_setting(win_t *win, btn_t *btn)
         sfRenderWindow_drawRectangleShape(win[3].win, btn[i].rect, NULL);
     }
 }
+
+void draw_button_game(win_t *win, btn_t *btn)
+{
+    sfRenderWindow_drawRectangleShape(win[2].win, btn[4].rect, NULL);
+    sfRenderWindow_drawRectangleShape(win[2].win, btn[8].rect, NULL);
+}

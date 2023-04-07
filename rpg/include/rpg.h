@@ -47,4 +47,9 @@ void set_button_setting_continue(btn_t *btn);
 void set_button_setting_restart(btn_t *btn);
 void draw_button(win_t *win, btn_t *btn);
 
+void set_button_inventory(btn_t *btn);
+int inventory_window(win_t *win);
+void draw_button_game(win_t *win, btn_t *btn);
+void created_inventory_window(win_t *win);
+
 #endif

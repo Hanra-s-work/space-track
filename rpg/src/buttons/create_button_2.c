@@ -46,3 +46,16 @@ void set_button_setting_restart(btn_t *btn)
     sfRectangleShape_setOutlineColor(btn[7].rect, sfBlack);
     sfRectangleShape_setOutlineThickness(btn[7].rect, 2.f);
 }
+
+void set_button_inventory(btn_t *btn)
+{
+    btn[8].scale.x = 100;
+    btn[8].scale.y = 50;
+    btn[8].pos.x = 50;
+    btn[8].pos.y = 850;
+    btn[8].rect = sfRectangleShape_create();
+    sfRectangleShape_setSize(btn[8].rect, btn[8].scale);
+    sfRectangleShape_setPosition(btn[8].rect, btn[8].pos);
+    sfRectangleShape_setOutlineColor(btn[8].rect, sfBlack);
+    sfRectangleShape_setOutlineThickness(btn[8].rect, 2.f);
+}
