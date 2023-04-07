@@ -24,6 +24,5 @@ int main_window(win_t *win, spt_t *spt, btn_t *btn)
         draw_buttons_and_sprite(btn, win, spt);
         sfRenderWindow_display(win[0].win);
     }
-    destroy(win, spt, btn);
     return 0;
 }

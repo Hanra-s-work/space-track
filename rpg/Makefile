@@ -20,6 +20,7 @@ SRC		+=	./src/actions/action_menu_page.c		\
 SRC		+=	./src/sprites/sprite_menu_page.c		\
 
 SRC		+=	./src/buttons/create_button.c			\
+			./src/buttons/create_button_2.c			\
 			./src/buttons/draw_buttons.c			\
 
 SRC		+=	./src/init_elements/init_button.c		\
