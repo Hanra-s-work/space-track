@@ -16,7 +16,7 @@ void draw_button(win_t *win, btn_t *btn)
 
 void draw_button_setting(win_t *win, btn_t *btn)
 {
-    for (int i = 5; i <= 5; i++) {
+    for (int i = 5; i <= 7; i++) {
         sfRenderWindow_drawRectangleShape(win[3].win, btn[i].rect, NULL);
     }
 }

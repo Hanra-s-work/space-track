@@ -18,7 +18,9 @@ static void init_button(btn_t *btn)
 
 void init_setting_button(btn_t *btn)
 {
-    set_button_game_save(btn);
+    set_button_setting_continue(btn);
+    set_button_setting_restart(btn);
+    set_button_setting_quit_save(btn);
 }
 
 void init_media(btn_t *btn)

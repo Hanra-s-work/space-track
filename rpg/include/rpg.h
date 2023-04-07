@@ -42,7 +42,9 @@ void set_button_credit(btn_t *btn);
 void set_button_quit(btn_t *btn);
 void set_button_setting(btn_t *btn);
 void set_button_savegarde(btn_t *btn);
-void set_button_game_save(btn_t *btn);
+void set_button_setting_quit_save(btn_t *btn);
+void set_button_setting_continue(btn_t *btn);
+void set_button_setting_restart(btn_t *btn);
 void draw_button(win_t *win, btn_t *btn);
 
 #endif
