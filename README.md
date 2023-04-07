@@ -4,7 +4,7 @@
 
 ## What is it?
 
-That's an RPS (ole-paying game)
+That's an RPG (Role-paying game)
 
 ## Why this name ?
 
