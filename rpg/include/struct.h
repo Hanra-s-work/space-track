@@ -39,4 +39,11 @@ typedef struct button_s {
     sfColor color;
 } btn_t;
 
+typedef struct unit_s {
+    char *unit;
+    int pv;
+    int atk;
+    int vit;
+} unit_t;
+
 #endif

@@ -1,0 +1,12 @@
+#Unit  PV ATK VIT
+#player
+player 50 5 10
+#guard
+guard1 10 1 2
+guard2 10 4 3
+guard3 12 2 4
+guard4 10 5 4
+guard5 13 3 3
+#zombie
+zombie 30 13 7
+roverz 60 18 20
