@@ -30,10 +30,6 @@ static void action_button_inventory(win_t *win)
         if (win[2].event.type == sfEvtMouseButtonPressed)
             inventory_window(win);
     }
-    // if (win[2].event.type == sfEvtKeyPressed &&
-    //     sfKeyboard_isKeyPressed('i')) {
-    //         inventory_window(win);
-    // }
 }
 
 void action_game_window(win_t *win, btn_t *btn, spt_t *spt)
