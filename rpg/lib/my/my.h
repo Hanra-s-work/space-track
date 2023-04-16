@@ -23,6 +23,8 @@ void my_putchar(char c);
 int my_put_nbr(int nb);
 int my_getnbr(char const *str);
 void my_show_word_array(char *const *tab);
-char **my_str_to_word_array(char *str);
+char **my_str_to_word_array(char *str, char sep);
+void free_tab(char **tab);
+char *my_strdup(char const *src);
 
 #endif

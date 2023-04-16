@@ -19,6 +19,10 @@ int credit_page(win_t *win, spt_t *spt);
 int game_window(win_t *win, btn_t *btn, spt_t *spt);
 int setting_window(win_t *win, btn_t *btn, spt_t *spt);
 
+// parsing
+char *get_buffer(char *filepath);
+void fill_stat_struct(unit_t *unit);
+
 // action
 void action_main_window(win_t *win, spt_t *spt, btn_t *btn);
 void action_game_window(win_t *win, btn_t *btn, spt_t *spt);

@@ -26,7 +26,5 @@ int my_getnbr(char const *str)
         if (*str < 43 || *str > 57 || *str == 44 || *str == 46 || *str == 47)
             return negative * number;
     }
-    if (number < -2147483647 || number > 2147483647)
-        return 0;
     return negative * number;
 }

@@ -44,6 +44,7 @@ typedef struct unit_s {
     int pv;
     int atk;
     int vit;
+    int max_size;
 } unit_t;
 
 #endif

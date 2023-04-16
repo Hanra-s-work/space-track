@@ -10,6 +10,9 @@
 
 int game_window(win_t *win, btn_t *btn, spt_t *spt)
 {
+    unit_t *unit = NULL;
+
+    fill_stat_struct(unit);
     created_game_window(win);
     set_button_setting(btn);
     set_button_inventory(btn);

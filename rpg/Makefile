@@ -18,6 +18,9 @@ SRC		+=	./src/windows/menu/main_window.c		\
 SRC		+=	./src/actions/action_menu_page.c		\
 			./src/actions/action_game_page.c		\
 
+SRC 	+=	./src/parsing/get_buffer.c 	\
+			./src/parsing/fill_stat_struct.c 	\
+
 SRC		+=	./src/sprites/sprite_menu_page.c		\
 
 SRC		+=	./src/buttons/create_button.c			\
