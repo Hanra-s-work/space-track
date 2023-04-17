@@ -10,7 +10,7 @@
 
 static void action_button_quit(win_t *win)
 {
-    sfWindow *relateTo = win[0].win;
+    sfWindow *relateTo = (sfWindow *)win[0].win;
     sfVector2i mouse = sfMouse_getPosition(relateTo);
 
     if ((mouse.x >= 1370 && mouse.x <= 1870) &&
@@ -22,7 +22,7 @@ static void action_button_quit(win_t *win)
 
 static void action_button_credit(win_t *win, spt_t *spt)
 {
-    sfWindow *relateTo = win[0].win;
+    sfWindow *relateTo = (sfWindow *)win[0].win;
     sfVector2i mouse = sfMouse_getPosition(relateTo);
 
     if ((mouse.x >= 1370 && mouse.x <= 1870) &&
@@ -34,7 +34,7 @@ static void action_button_credit(win_t *win, spt_t *spt)
 
 static void action_button_open_game(win_t *win, btn_t *btn, spt_t *spt)
 {
-    sfWindow *relateTo = win[0].win;
+    sfWindow *relateTo = (sfWindow *)win[0].win;
     sfVector2i mouse = sfMouse_getPosition(relateTo);
 
     if ((mouse.x >= 1370 && mouse.x <= 1870) &&

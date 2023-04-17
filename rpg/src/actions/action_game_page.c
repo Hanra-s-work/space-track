@@ -10,7 +10,7 @@
 
 static void action_button_setting(win_t *win, btn_t *btn, spt_t *spt)
 {
-    sfWindow *relateTo = win[2].win;
+    sfWindow *relateTo = (sfWindow *)win[2].win;
     sfVector2i mouse = sfMouse_getPosition(relateTo);
 
     if ((mouse.x >= 1820 && mouse.x <= 1870) &&
@@ -22,7 +22,7 @@ static void action_button_setting(win_t *win, btn_t *btn, spt_t *spt)
 
 static void action_button_inventory(win_t *win)
 {
-    sfWindow *relateTo = win[2].win;
+    sfWindow *relateTo = (sfWindow *)win[2].win;
     sfVector2i mouse = sfMouse_getPosition(relateTo);
 
     if ((mouse.x >= 50 && mouse.x <= 150) &&

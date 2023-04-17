@@ -10,7 +10,7 @@
 
 void action_setting_quit_game(win_t *win, spt_t *spt, btn_t *btn)
 {
-    sfWindow *relateTo = win[3].win;
+    sfWindow *relateTo = (sfWindow *)win[3].win;
     sfVector2i mouse = sfMouse_getPosition(relateTo);
 
     if ((mouse.x >= 20 && mouse.x <= 300) &&
@@ -25,7 +25,7 @@ void action_setting_quit_game(win_t *win, spt_t *spt, btn_t *btn)
 
 void action_setting_cont_rest(win_t *win, spt_t *spt, btn_t *btn)
 {
-    sfWindow *relateTo = win[3].win;
+    sfWindow *relateTo = (sfWindow *)win[3].win;
     sfVector2i mouse = sfMouse_getPosition(relateTo);
 
     if ((mouse.x >= 20 && mouse.x <= 300) &&
