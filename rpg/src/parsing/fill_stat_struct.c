@@ -10,7 +10,7 @@
 #include "rpg.h"
 #include "struct.h"
 
-int get_array_size(char **array)
+static int get_array_size(char **array)
 {
     int size = 0;
 
@@ -18,6 +18,12 @@ int get_array_size(char **array)
         size++;
     }
     return size;
+}
+
+static void free_all(char **tab, char *buffer)
+{
+    free_tab(tab);
+    free(buffer);
 }
 
 void fill_stat_struct(unit_t *unit)
@@ -41,6 +47,5 @@ void fill_stat_struct(unit_t *unit)
         j++;
     }
     unit[0].max_size = j;
-    free_tab(tab);
-    free(buffer);
+    free_all(tab, buffer);
 }
