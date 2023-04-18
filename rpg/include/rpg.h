@@ -9,6 +9,7 @@
     #define RPG_H_
 
     #include "struct.h"
+    #include "intro.h"
 
 void destroy(win_t *win, spt_t *spt, btn_t *btn);
 void free_struct(win_t *win, spt_t *spt, btn_t *btn);
@@ -30,6 +31,9 @@ void action_game_window(win_t *win, btn_t *btn, spt_t *spt);
 // sprite
 void set_sprite_background(spt_t *spt);
 void credit_page_background(spt_t *spt);
+void eve_sprite(s_intro_t *s);
+void bkg_intro(s_intro_t *s);
+sfRectangleShape *intro_rect(s_intro_t *s);
 
 // create page
 void created_main_window(win_t *win, spt_t *spt);
