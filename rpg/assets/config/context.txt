@@ -1,22 +1,15 @@
-Eve: Hello Dr.Rick, I am Eve your personal assistant.
-Eve: I will accompany you for the ROVER2MD mission.\n
-Eve: Do you want to know the origin of this mission ?
-VO: Before continuing your adventure, I will remind you of some events from the
-VO: past to refresh your memory.
-VO: 56 years ago, Perseverance landed on Mars.
-VO: Today is the year 2076 and NASA has lost contact with Perseverance for
-VO: reasons unknown to us.
-VO: Since that day, a new space mission named ROVER2MD has been set up to
-VO: recover Perseverance.
-VO: Unfortunately, you were not selected to participate in the ROVER2MD mission.
-VO: On your end, you started plotting a lot of theories about this loss of
-VO: signal.
-VO: It took a toll on your sanity.
-VO: You are only waiting for one thing, it is to participate in the new space
-VO: mission!
-VO: Whether it's by force or whether you're given the mission, it doesn't
-VO: matter, you will be part of this mission, no matter what !
-VO: Thus comes the day when NASA formalizes and finally announces the creation
-VO: of the ROVER2MD mission in August 2076.
-VO: Months have passed since this announcement and today is D-Day! The rocket
-VO: launch is scheduled for 5 p.m.
+Eve : Hello Dr.Rick, I am Eve your personal assistant. I will accompany you for the ROVER2MD mission.
+        Do you want to know the origin of this mission?
+        Before continuing your adventure, I will remind you of some events from the past to refresh your memory.
+        56 years ago, Perseverance landed on Mars.
+        Today is the year 2076 and NASA has lost contact with Perseverance for reasons unknown to us.
+        Since that day, a new space mission named ROVER2MD has been set up to recover Perseverance.
+        Unfortunately, you were not selected to participate in the ROVER2MD mission.
+        On your end, you started plotting a lot of theories about this loss of signal.
+        It took a toll on your sanity.
+        You are only waiting for one thing, it is to participate in the new space mission!
+        Whether it's by force or whether you're given the mission, it doesn't matter, you will be part of this mission, no matter what !
+        Thus comes the day when NASA formalizes and finally announces the creation of the ROVER2MD mission in August 2076.
+        Months have passed since this announcement and today is D-Day! The rocket launch is scheduled for 5 p.m.
+Eve : Congratulations Dr.Rick! For this escape. Now we can continue our way to the moon.
+Player : Let's go for adventure
