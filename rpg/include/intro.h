@@ -5,8 +5,8 @@
 ** intro.h
 */
 
-#ifndef TEXT_H_
-    #define TEXT_H_
+#ifndef INTRO_H_
+    #define INTRO_H_
 
     #include <SFML/Graphics.h>
 
