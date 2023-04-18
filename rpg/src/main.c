@@ -8,6 +8,7 @@
 #include "my.h"
 #include "struct.h"
 #include "rpg.h"
+#include "intro.h"
 
 int main(int ac, char **av)
 {
