@@ -25,6 +25,8 @@ void action_game_window(win_t *win, btn_t *btn, spt_t *spt);
 
 // sprite
 void set_sprite_background(spt_t *spt);
+void set_scale(sfSprite *sp);
+void set_pos(spt_t *brush, int x, int y);
 
 // create page
 void created_main_window(win_t *win, spt_t *spt);

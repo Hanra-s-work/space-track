@@ -16,5 +16,5 @@ int my_strncmp(char const *s1, char const *s2, int n)
     my_strncpy(s2_sub, s2, n);
     s1_sub[n] = '\0';
     s2_sub[n] = '\0';
-    return my_strcmp(s1_sub, s2_sub);
+    return my_strncmp(s1_sub, s2_sub, n);
 }
