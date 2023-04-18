@@ -28,7 +28,7 @@ static void free_all(char **tab, char *buffer)
 
 void fill_stat_struct(unit_t *unit)
 {
-    char *buffer = get_buffer("./rpg/assets/stat.txt");
+    char *buffer = get_buffer("./rpg/assets/config/stat.txt");
     char **tab = my_str_to_word_array(buffer, '\n');
     char **temp = NULL;
     int size = get_array_size(tab);

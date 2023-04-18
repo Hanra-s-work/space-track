@@ -29,6 +29,7 @@ void action_game_window(win_t *win, btn_t *btn, spt_t *spt);
 
 // sprite
 void set_sprite_background(spt_t *spt);
+void credit_page_background(spt_t *spt);
 
 // create page
 void created_main_window(win_t *win, spt_t *spt);
