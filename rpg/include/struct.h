@@ -21,9 +21,12 @@ typedef struct window_s {
 } win_t;
 
 typedef struct sprite_s {
+    char *path;
     sfTexture *texture;
     sfSprite *sprite;
     sfColor pix_clr;
+    sfVector2f positions;
+    sfIntRect image;
 } spt_t;
 
 typedef struct text_s {
@@ -38,5 +41,13 @@ typedef struct button_s {
     sfVector2f pos;
     sfColor color;
 } btn_t;
+
+typedef struct inventory_s {
+    sfSprite *object;
+    int x;
+    int y;
+    struct inventory_s *next;
+    struct inventory_s *prev;
+} inventory_t;
 
 #endif

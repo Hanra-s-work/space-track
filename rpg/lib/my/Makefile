@@ -5,7 +5,7 @@
 ## lib
 ##
 
-CC = 	gcc
+CC = 	@gcc
 
 RM = 	rm -f
 
@@ -21,6 +21,7 @@ SRC = 	my_putchar.c \
 		my_show_word_array.c \
 		my_str_to_word_array.c \
 		my_strcat.c \
+		my_strdup.c
 
 OBJ = $(SRC:.c=.o)
 
