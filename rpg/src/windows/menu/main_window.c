@@ -9,7 +9,7 @@
 #include "rpg.h"
 #include "intro.h"
 
-void intro_sprite(s_intro_t *s)
+/*void intro_sprite(s_intro_t *s)
 {
     eve_sprite(s);
     bkg_intro(s);
@@ -21,7 +21,7 @@ void draw_intro(win_t *win, s_intro_t *s)
     sfRenderWindow_drawSprite(win->win, s->s_eve, NULL);
     sfRenderWindow_drawSprite(win->win, s->s_bkg, NULL);
     sfRenderWindow_drawRectangleShape(win->win, s->rect, NULL);
-}
+}*/
 
 void draw_buttons_and_sprite(btn_t *btn, win_t *win, spt_t *spt)
 {
@@ -31,6 +31,8 @@ void draw_buttons_and_sprite(btn_t *btn, win_t *win, spt_t *spt)
 
 int main_window(win_t *win, spt_t *spt, btn_t *btn)
 {
+    txt_t *txt = malloc(sizeof(txt_t) * 30);
+
     created_main_window(win, spt);
     init_media(btn);
     while (sfRenderWindow_isOpen(win[0].win)) {

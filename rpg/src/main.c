@@ -12,9 +12,9 @@
 
 int main(int ac, char **av)
 {
-    win_t *win = malloc(sizeof(win_t) * 5);
-    spt_t *spt = malloc(sizeof(spt_t) * 2);
-    btn_t *btn = malloc(sizeof(btn_t) * 9);
+    win_t *win = malloc(sizeof(win_t) * 20);
+    spt_t *spt = malloc(sizeof(spt_t) * 20);
+    btn_t *btn = malloc(sizeof(btn_t) * 20);
 
     if (ac == 1 && my_strcmp(av[0], "./my_rpg") == 0) {
         if (main_window(win, spt, btn) == 84) {

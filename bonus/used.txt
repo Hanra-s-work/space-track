@@ -1,0 +1,30 @@
+Struct Window
+
+0 : main
+1 : credit
+2 : game
+3 : settings
+4 : inventory
+
+Struct Sprite
+
+0 : Background main 
+1 : background credit 
+2 : eve
+3 : background intro 
+
+Struct text 
+
+
+
+Struct button 
+
+0 : new_game 
+1 : save 
+2 : credit 
+3 : quit 
+4 : settings 
+5 : in settings -> quit & save 
+6 : in settings -> continue 
+7 : in settings -> restart 
+8 : inventory 

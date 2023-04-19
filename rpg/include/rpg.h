@@ -23,6 +23,12 @@ int setting_window(win_t *win, btn_t *btn, spt_t *spt);
 // parsing
 char *get_buffer(char *filepath);
 void fill_stat_struct(unit_t *unit);
+int set_move(char **map);
+char **set_map(char *filepath);
+bool set_left(char **map, int i);
+bool set_right(char **map, int i)
+bool set_up(char **map, int i)
+bool set_down(char **map, int i)
 
 // action
 void action_main_window(win_t *win, spt_t *spt, btn_t *btn);
@@ -31,9 +37,8 @@ void action_game_window(win_t *win, btn_t *btn, spt_t *spt);
 // sprite
 void set_sprite_background(spt_t *spt);
 void credit_page_background(spt_t *spt);
-void eve_sprite(s_intro_t *s);
-void bkg_intro(s_intro_t *s);
-sfRectangleShape *intro_rect(s_intro_t *s);
+void eve_sprite(spt_t *spt);
+void bkg_intro(spt_t *spt);
 
 // create page
 void created_main_window(win_t *win, spt_t *spt);

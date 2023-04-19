@@ -20,6 +20,9 @@ SRC		+=	./src/actions/action_menu_page.c		\
 
 SRC 	+=	./src/parsing/get_buffer.c 	\
 			./src/parsing/fill_stat_struct.c 	\
+			./src/parsing/map_management/set_direction.c 	\
+			./src/parsing/map_management/set_map.c 	\
+			./src/parsing/map_management/set_move.c 	\
 
 SRC		+=	./src/sprites/sprite_menu_page.c		\
 			./src/sprites/sprite_credit_page.c 	\
