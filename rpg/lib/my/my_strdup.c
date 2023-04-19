@@ -5,7 +5,7 @@
 ** strdup
 */
 
-#include <malloc.h>
+#include <stdlib.h>
 #include "my.h"
 
 char *my_strdup(char const *src)

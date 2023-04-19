@@ -1,0 +1,16 @@
+/*
+** EPITECH PROJECT, 2022
+** space-track
+** File description:
+** disp_inv.c
+*/
+
+#include "struct.h"
+#include "rpg.h"
+
+spt_t *disp_inv(spt_t *sprite, inventory_t *inv, win_t win)
+{
+    set_pos(sprite, inv->x, inv->y);
+    set_scale(sprite->sprite);
+    sfRenderWindow_drawSprite(win.win, inv->object, NULL);
+}

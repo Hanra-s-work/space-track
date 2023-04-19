@@ -6,7 +6,7 @@
 */
 
 #include <stddef.h>
-#include <malloc.h>
+#include <stdlib.h>
 
 void free_tab(char **tab)
 {
