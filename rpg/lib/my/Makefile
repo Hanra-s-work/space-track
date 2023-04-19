@@ -35,9 +35,9 @@ CFLAG = -Wall -Wextra
 
 OBJ = $(SRC:.c=.o)
 
-all: update_include $(NAME2) update_lib
+all: update_include $(NAME) update_lib
 
-$(NAME2): $(OBJ)
+$(NAME): $(OBJ)
 	$(ARCHIVE) $(NAME) $(OBJ)
 
 update_include:
