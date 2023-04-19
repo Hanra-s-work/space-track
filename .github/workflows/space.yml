@@ -14,10 +14,10 @@ env:
   EXECUTABLES: "my_rpg"
   GITHUB_SSH_KEY: ${{ secrets.GIT_SSH_PRIVATE_KEY }}
   CHECK_CODING_STYLE: rpg/bonus/bash/check.sh
-  DISPLAY: rpg/bonus/bash/display_when_fail.sh
-  LAUNCH_CODE: rpg/bonus/bash/run_docker.sh
-  CHECK_BINARY: rpg/bonus/bash/check_exist.sh
-  CHECK_EXECUTION: rpg/bonus/bash/check_execution.sh
+  DISPLAY: bonus/bash/display_when_fail.sh
+  LAUNCH_CODE: bonus/bash/run_docker.sh
+  CHECK_BINARY: bonus/bash/check_exist.sh
+  CHECK_EXECUTION: bonus/bash/check_execution.sh
 
 
 jobs:
