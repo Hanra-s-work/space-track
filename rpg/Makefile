@@ -68,7 +68,7 @@ NAME	=	my_rpg
 
 NAMEMAC	=	my_rpg
 
-MACFLAG	=	-Wno-deprecated
+MACFLAG	=	-Wno-deprecated -I./lib/my/my.h
 
 LIBFLAGS 	=	-Llib/my/ -lmy
 
@@ -76,7 +76,7 @@ FLAGCSFML 	= 	-lcsfml-system -lcsfml-graphics -lcsfml-audio -lcsfml-window
 
 CFLAGS 		= 	-Wall -Wextra -g3
 
-CPPFLAGS	= 	-I./include/ -I./lib/my/my.h
+CPPFLAGS	= 	-I./include/
 
 all:	$(NAME)
 
