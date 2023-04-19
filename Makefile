@@ -26,4 +26,8 @@ fclean: clean
 
 re:	fclean all
 
-.PHONY:	re fclean clean all
+mac:
+	make mac -C ./rpg/
+	mv ./rpg/my_rpg ./
+
+.PHONY:	re fclean clean all mac

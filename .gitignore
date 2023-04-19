@@ -4,6 +4,6 @@
 *~
 vgcore.*
 *.a
-*.DS_Store
+.DS_Store
 my_rpg
 .vscode
