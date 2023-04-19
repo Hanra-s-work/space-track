@@ -8,23 +8,24 @@ Struct Window
 
 Struct Sprite
 
-0 : Background main 
-1 : background credit 
+0 : Background main
+1 : background credit
 2 : eve
-3 : background intro 
+3 : background intro
 
-Struct text 
+Struct text
 
 
 
-Struct button 
+Struct button
 
-0 : new_game 
-1 : save 
-2 : credit 
-3 : quit 
-4 : settings 
-5 : in settings -> quit & save 
-6 : in settings -> continue 
-7 : in settings -> restart 
-8 : inventory 
+0 : new_game
+1 : save
+2 : credit
+3 : quit
+4 : settings
+5 : in settings -> quit & save
+6 : in settings -> continue
+7 : in settings -> restart
+8 : inventory
+9 : rect intro
