@@ -40,6 +40,7 @@ void set_sprite_background(spt_t *spt);
 void credit_page_background(spt_t *spt);
 void eve_sprite(spt_t *spt);
 void bkg_intro(spt_t *spt);
+sfRectangleShape *create_rectangle(btn_t *btn);
 
 // create page
 void created_main_window(win_t *win, spt_t *spt);
@@ -50,6 +51,7 @@ void created_setting_window(win_t *win);
 //init element
 void init_setting_button(btn_t *btn);
 void init_media(btn_t *btn);
+void init_intro_text(text_t *txt);
 
 // buttons
 void set_button_new_game(btn_t *btn);
