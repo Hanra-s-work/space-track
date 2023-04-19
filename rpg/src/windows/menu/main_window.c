@@ -30,7 +30,7 @@ void draw_buttons_and_sprite(btn_t *btn, win_t *win, spt_t *spt)
 
 int main_window(win_t *win, spt_t *spt, btn_t *btn)
 {
-    txt_t *txt = malloc(sizeof(txt_t) * 30);
+    text_t *txt = malloc(sizeof(text_t) * 30);
 
     created_main_window(win, spt);
     init_media(btn);
