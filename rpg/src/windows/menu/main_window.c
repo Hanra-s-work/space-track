@@ -7,7 +7,6 @@
 
 #include "struct.h"
 #include "rpg.h"
-#include "intro.h"
 
 /*void intro_sprite(s_intro_t *s)
 {

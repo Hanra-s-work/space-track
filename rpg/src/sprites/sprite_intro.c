@@ -29,7 +29,7 @@ void bkg_intro(spt_t *spt)
 
     spt[3].texture = sfTexture_createFromFile(name, NULL);
     spt[3].sprite = sfSprite_create();
-    sfSprite_setTexture(spt[3].sprite, sspt[3].texture, sfTrue);
+    sfSprite_setTexture(spt[3].sprite, spt[3].texture, sfTrue);
     sfSprite_setScale(spt[3].sprite, scale);
     sfSprite_setPosition(spt[3].sprite, pos_bkg);
 }

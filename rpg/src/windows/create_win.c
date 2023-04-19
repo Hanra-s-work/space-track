@@ -60,10 +60,12 @@ void created_setting_window(win_t *win)
 void created_inventory_window(win_t *win)
 {
     sfUint32 sfrc = sfClose;
-    char const name[7] = "My_RPG";
+    char const name[10] = "Iventory";
+    sfVector2i pos_win = {0, 546};
 
-    win[4].mode.width = 920;
-    win[4].mode.height = 680;
+    win[4].mode.width = 1920;
+    win[4].mode.height = 500;
     win[4].mode.bitsPerPixel = 32;
     win[4].win = sfRenderWindow_create(win[4].mode, name, sfrc, NULL);
+    sfRenderWindow_setPosition(win[4].win, pos_win);
 }

@@ -5,6 +5,8 @@
 ** intro_text.c
 */
 
+#include <SFML/Graphics/Text.h>
+#include <SFML/Graphics/Font.h>
 #include "my.h"
 #include "struct.h"
 #include "rpg.h"
@@ -13,7 +15,7 @@ void init_intro_text(txt_t *t)
 {
     char name[100] = "./rpg/assets/font/KGBlankSpaceSketch.ttf";
     sfFont *f = sfFont_createFromFile(name);
-    char intro_buffer = get_buffer("./rpg/assets/config/context.txt");
+    char *intro_buffer = get_buffer("./rpg/assets/config/context.txt");
     char **tab = my_str_to_word_array(intro_buffer, '\n');
 
     for (int i = 0; tab[i] != NULL; i++) {
@@ -24,4 +26,6 @@ void init_intro_text(txt_t *t)
         sfText_setFillColor(t[i].text, sfWhite);
         sfText_setPosition(t[i].text, (sfVector2f){250, 900});
     }
+    free(intro_buffer);
+    free_tab(tab);
 }

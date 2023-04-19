@@ -60,16 +60,16 @@ static bool init_down(char **map)
 int set_move(char **map)
 {
     if ((sfKeyboard_isKeyPressed(sfKeyLeft) == sfTrue ||
-        sfKeyboard_isKeyPressed(sfKeyQ) == sfTrue) && init_left == true)
+        sfKeyboard_isKeyPressed(sfKeyQ) == sfTrue) && init_left(map) == true)
             return left;
     if ((sfKeyboard_isKeyPressed(sfKeyRight) == sfTrue ||
-        sfKeyboard_isKeyPressed(sfKeyD) == sfTrue) && init_right == true)
+        sfKeyboard_isKeyPressed(sfKeyD) == sfTrue) && init_right(map) == true)
             return right;
     if ((sfKeyboard_isKeyPressed(sfKeyUp) == sfTrue ||
-        sfKeyboard_isKeyPressed(sfKeyZ) == sfTrue) && init_up == true)
+        sfKeyboard_isKeyPressed(sfKeyZ) == sfTrue) && init_up(map) == true)
             return up;
     if ((sfKeyboard_isKeyPressed(sfKeyDown) == sfTrue ||
-        sfKeyboard_isKeyPressed(sfKeyS) == sfTrue) && init_down == true)
+        sfKeyboard_isKeyPressed(sfKeyS) == sfTrue) && init_down(map) == true)
             return down;
     return 0;
 }

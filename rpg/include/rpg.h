@@ -8,8 +8,9 @@
 #ifndef RPG_H_
     #define RPG_H_
 
+    #include <stdbool.h>
+    #include <stdlib.h>
     #include "struct.h"
-    #include "intro.h"
 
 void destroy(win_t *win, spt_t *spt, btn_t *btn);
 void free_struct(win_t *win, spt_t *spt, btn_t *btn);
@@ -26,9 +27,9 @@ void fill_stat_struct(unit_t *unit);
 int set_move(char **map);
 char **set_map(char *filepath);
 bool set_left(char **map, int i);
-bool set_right(char **map, int i)
-bool set_up(char **map, int i)
-bool set_down(char **map, int i)
+bool set_right(char **map, int i);
+bool set_up(char **map, int i);
+bool set_down(char **map, int i);
 
 // action
 void action_main_window(win_t *win, spt_t *spt, btn_t *btn);
