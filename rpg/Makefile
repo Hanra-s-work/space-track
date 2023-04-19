@@ -7,43 +7,41 @@
 
 SRC 	=	./src/main.c 							\
 			./src/free_struct.c						\
-
-SRC		+=	./src/windows/menu/main_window.c		\
+\
+			./src/windows/menu/main_window.c		\
 			./src/windows/menu/credit/credit_window.c	\
 			./src/windows/game/game_window.c		\
 			./src/windows/game/setting/setting_window.c		\
 			./src/windows/game/inventory_window.c		\
 			./src/windows/create_win.c				\
-
-SRC		+=	./src/actions/action_menu_page.c		\
+\
+			./src/actions/action_menu_page.c		\
 			./src/actions/action_game_page.c		\
-
-SRC		+=	./src/sprites/sprite_menu_page.c		\
+\
+			./src/sprites/sprite_menu_page.c		\
 			./src/sprites/sprite_credit_page.c 	\
 			./src/sprites/sprite_intro.c	\
 			./src/text/intro_text.c	\
-
-SRC		+=	./src/buttons/create_button.c			\
+\
+			./src/buttons/create_button.c			\
 			./src/buttons/create_button_2.c			\
 			./src/buttons/draw_buttons.c			\
-
-SRC		+=	./src/init_elements/init_button.c		\
+\
+			./src/init_elements/init_button.c		\
 			./src/init_elements/init_sprite.c	\
-
-SRC	+=	./src/parsing/get_buffer.c 	\
+\
+		./src/parsing/get_buffer.c 	\
 		./src/parsing/fill_stat_struct.c 	\
 		./src/parsing/map_management/set_direction.c 	\
 		./src/parsing/map_management/set_map.c 	\
 		./src/parsing/map_management/set_move.c 	\
-
-SRC	+=	./src/inventory/add_end_list.c	\
+\
+		./src/inventory/add_end_list.c	\
 		./src/inventory/disp_inv.c	\
 		./src/inventory/set_pos.c	\
 		./src/inventory/the_inv.c
 
-SRCMAC	=	$(SRC)
-
-SRCMAC	+=	./lib/my/my_getnbr.c	\
+SRCMAC	=	./lib/my/my_getnbr.c	\
 			./lib/my/my_put_nbr.c	\
 			./lib/my/my_putchar.c	\
 			./lib/my/my_putstr.c	\
@@ -56,51 +54,58 @@ SRCMAC	+=	./lib/my/my_getnbr.c	\
 			./lib/my/my_strncpy.c	\
 			./lib/my/free_tab.c	\
 
+SILENT	=	@
+
+CC 		=	$(SILENT)gcc
+
+RM 		=	$(SILENT)rm -f
+
+MAK		=	$(SILENT)make -C
+
+NAME	=	my_rpg
+
+LIBFLAGS 	=	-Llib/ -lmy
+
+FLAGCSFML 	= 	-lcsfml-system -lcsfml-graphics -lcsfml-audio -lcsfml-window
+
+CFLAGS 		= 	-Wall -Wextra
+
+CPPFLAGS	= 	-iquote./include/
+
 OBJ 	=	$(SRC:.c=.o)
 
 OBJMAC	=	$(SRCMAC:.c=.o)
 
-CC 		=	gcc
-
-RM 		=	rm -f
-
-NAME	=	my_rpg
-
-NAMEMAC	=	my_rpg
-
-MACFLAG	=	-Wno-deprecated -I./lib/my/my.h
-
-LIBFLAGS 	=	-Llib/my/ -lmy
-
-FLAGCSFML 	= 	-lcsfml-system -lcsfml-graphics -lcsfml-audio -lcsfml-window
-
-CFLAGS 		= 	-Wall -Wextra -g3
-
-CPPFLAGS	= 	-I./include/
-
 all:	$(NAME)
 
-$(NAME):	$(OBJ)
-	make -C ./lib/my
-	$(CC) $(SRC) -o $(NAME) $(LIBFLAGS) $(CFLAGS) $(CPPFLAGS) $(FLAGCSFML)
-	make clean
-	make fclean -C ./lib/my
+make_lib:
+	$(MAK) ./lib/my
+
+$(NAME): make_lib	$(OBJ)
+	$(CC) $(SRC) -o $(NAME) $(CFLAGS) $(CPPFLAGS) $(FLAGCSFML) $(LIBFLAGS)
+
+mac: CFLAGS	+=	-Wno-deprecated
+mac: CFLAGS	+=	-std=c99
+mac:	$(OBJ) $(OBJMAC)
+	$(MAK) ./lib/my update_include
+	$(CC) -o $(NAME) $(OBJ) $(OBJMAC) $(CFLAGS) $(CPPFLAGS) $(FLAGCSFML)
 
 clean:
 	$(RM) $(OBJ)
+	$(MAK) ./lib/my clean
 
 fclean:	clean
 	$(RM) $(NAME)
-	make fclean -C ./lib/my
+	$(MAK) ./lib/my fclean
 
 re:	fclean all
 
-allmac:	$(NAMEMAC)
+rac: fclean mac
 
-$(NAMEMAC):	$(OBJMAC)
-	$(CC) -o $(NAMEMAC) $(OBJMAC) $(CFLAGS) $(CPPFLAGS) $(FLAGCSFML) $(MACFLAG)
+debug:	CFLAGS	+=	-g3
+debug:	all
 
-mac: allmac
-	$(CC) -o $(NAMEMAC) $(OBJMAC) $(CFLAGS) $(CPPFLAGS) $(FLAGCSFML) $(MACFLAG)
+mebug: CFLAGS	+=	-g3
+mebug: mac
 
-.PHONY:	re fclean clean all mac
+.PHONY:	re fclean clean all mac debug rac mebug

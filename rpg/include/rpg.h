@@ -66,5 +66,7 @@ void set_button_inventory(btn_t *btn);
 int inventory_window(win_t *win);
 void draw_button_game(win_t *win, btn_t *btn);
 void created_inventory_window(win_t *win);
+void set_pos(spt_t *brush, int x, int y);
+void set_scale(sfSprite *sp);
 
 #endif

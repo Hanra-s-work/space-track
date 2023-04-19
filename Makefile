@@ -5,29 +5,37 @@
 ## globla
 ##
 
-CC 		=	gcc
-
-RM 		=	rm -f
+SILENT	=	@
 
 NAME	=	my_rpg
 
-all:	$(NAME)
+MOVE	=	$(SILENT)mv
 
-$(NAME):
-	make -C ./rpg/
-	mv ./rpg/my_rpg ./
+MAK	=	$(SILENT)make -C
 
-clean:
-	make clean -C ./rpg/
-
-fclean: clean
-	$(RM) $(NAME)
-	make fclean -C ./rpg/
-
-re:	fclean all
+all:
+	$(MAK) ./rpg/
+	$(MOVE) ./rpg/$(NAME) ./$(NAME)
 
 mac:
-	make mac -C ./rpg/
-	mv ./rpg/my_rpg ./
+	$(MAK) ./rpg/ mac
+	$(MOVE) ./rpg/$(NAME) ./$(NAME)
 
-.PHONY:	re fclean clean all mac
+clean:
+	$(MAK) ./rpg/ clean
+
+fclean: clean
+	$(MAK) ./rpg/ fclean
+	$(SILENT)rm -f $(NAME)
+
+re: fclean all
+
+rac: fclean mac
+
+debug:
+	$(MAK) ./rpg/ debug
+
+mebug:
+	$(MAK) ./rpg/ mebug
+
+.PHONY:	re fclean clean all mac mebug

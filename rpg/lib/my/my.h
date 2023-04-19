@@ -25,5 +25,6 @@ int my_getnbr(char const *str);
 char **my_str_to_word_array(char *str, char sep);
 int my_strcmp(char const *s1, char const *s2);
 char *my_strdup(char const *src);
+void free_tab(char **tab);
 
 #endif

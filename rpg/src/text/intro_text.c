@@ -8,8 +8,8 @@
 #include <SFML/Graphics/Text.h>
 #include <SFML/Graphics/Font.h>
 #include "my.h"
-#include "struct.h"
 #include "rpg.h"
+#include "struct.h"
 
 void init_intro_text(txt_t *t)
 {

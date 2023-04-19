@@ -5,10 +5,6 @@
 ## lib
 ##
 
-CC = 	gcc
-
-RM = 	rm -f
-
 SRC = 	my_putchar.c \
 		my_putstr.c \
 		my_put_nbr.c \
@@ -23,20 +19,33 @@ SRC = 	my_putchar.c \
 		free_tab.c \
 		my_strdup.c
 
-OBJ = $(SRC:.c=.o)
+SILENT	=	@
+
+CC	=	$(SILENT)gcc
+
+RM	=	$(SILENT)rm -f
+
+COPY	=	$(SILENT)cp
+
+ARCHIVE	=	$(SILENT)ar rc
 
 NAME = libmy.a
 
 CFLAG = -Wall -Wextra
 
-all: $(NAME)
+OBJ = $(SRC:.c=.o)
 
-$(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
-	cp $(NAME) ../$(NAME)
-	cp $(NAME) ../../$(NAME)
-	cp my.h ../../include/
-	make clean
+all: update_include $(NAME2) update_lib
+
+$(NAME2): $(OBJ)
+	$(ARCHIVE) $(NAME) $(OBJ)
+
+update_include:
+	$(COPY) my.h ../../include/
+
+update_lib:
+	$(COPY) $(NAME) ../$(NAME)
+	$(COPY) $(NAME) ../../$(NAME)
 
 clean:
 	$(RM) $(OBJ)
@@ -48,4 +57,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: re all fclean clean
+.PHONY: re all fclean clean update_include update_lib
