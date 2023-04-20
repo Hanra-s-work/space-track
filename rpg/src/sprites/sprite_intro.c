@@ -8,6 +8,7 @@
 #include "struct.h"
 #include "rpg.h"
 
+
 void eve_sprite(spt_t *spt)
 {
     sfVector2f pos_eve = { 30, 835 };

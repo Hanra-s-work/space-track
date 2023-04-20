@@ -57,6 +57,7 @@ void created_intro_window(win_t *win);
 
 //init element
 void init_setting_button(btn_t *btn);
+void init_intro_button(btn_t *btn);
 void init_media(btn_t *btn);
 void init_intro_text(txt_t *txt);
 
@@ -70,6 +71,8 @@ void set_button_setting_quit_save(btn_t *btn);
 void set_button_setting_continue(btn_t *btn);
 void set_button_setting_restart(btn_t *btn);
 void set_intro_rect(btn_t *btn);
+void set_intro_yes_rect(btn_t *btn);
+void set_intro_no_rect(btn_t *btn);
 void draw_button(win_t *win, btn_t *btn);
 void draw_button_intro(win_t *win, btn_t *btn);
 void draw_button_game(win_t *win, btn_t *btn);

@@ -19,8 +19,14 @@ static void init_button(btn_t *btn)
 void init_setting_button(btn_t *btn)
 {
     set_button_setting_continue(btn);
-    set_button_setting_restart(btn);
+    set_button_setting_restart(btn);    set_intro_rect(btn);
     set_button_setting_quit_save(btn);
+}
+
+void init_intro_button(btn_t *btn)
+{
+    set_intro_no_rect(btn);
+    set_intro_yes_rect(btn);
 }
 
 void init_media(btn_t *btn)
