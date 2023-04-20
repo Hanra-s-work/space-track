@@ -33,17 +33,3 @@ void bkg_intro(spt_t *spt)
     sfSprite_setScale(spt[3].sprite, scale);
     sfSprite_setPosition(spt[3].sprite, pos_bkg);
 }
-
-sfRectangleShape *create_rectangle(btn_t *btn)
-{
-    sfVector2f pos_rect = {5, 820};
-    sfVector2f size_rect = {1910, 200};
-    int thickness = 3;
-    btn[9].rect = sfRectangleShape_create();
-    sfRectangleShape_setSize(btn[9].rect, size_rect);
-    sfRectangleShape_setFillColor(btn[9].rect, sfTransparent);
-    sfRectangleShape_setOutlineColor(btn[9].rect, sfBlack);
-    sfRectangleShape_setOutlineThickness(btn[9].rect, thickness);
-    sfRectangleShape_setPosition(btn[9].rect, pos_rect);
-    return 0;
-}

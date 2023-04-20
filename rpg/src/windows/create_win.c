@@ -20,7 +20,7 @@ void created_main_window(win_t *win, spt_t *spt)
     set_sprite_background(spt);
 }
 
-void created_credit_window(win_t *win, spt_t *spt)
+void created_credit_window(win_t *win)
 {
     sfUint32 sfrc = sfClose;
     char const name[7] = "Credit";
@@ -35,13 +35,16 @@ void created_credit_window(win_t *win, spt_t *spt)
 
 void created_game_window(win_t *win)
 {
-    sfUint32 sfrc = sfClose;
+    sfUint32 sfrc = sfResize | sfClose;
     char const name[11] = "SpaceTrack";
+    sfVector2i pos_win = { 0, 0 };
 
     win[2].mode.width = 1920;
     win[2].mode.height = 1080;
     win[2].mode.bitsPerPixel = 32;
     win[2].win = sfRenderWindow_create(win[2].mode, name, sfrc, NULL);
+    sfRenderWindow_setPosition(win[2].win, pos_win);
+
 }
 
 void created_setting_window(win_t *win)

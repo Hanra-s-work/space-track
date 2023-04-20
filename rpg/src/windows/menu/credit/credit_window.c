@@ -19,7 +19,7 @@ static void action_credit_window(win_t *win)
 
 int credit_page(win_t *win, spt_t *spt)
 {
-    created_credit_window(win, spt);
+    created_credit_window(win);
     credit_page_background(spt);
     while (sfRenderWindow_isOpen(win[1].win)) {
         action_credit_window(win);

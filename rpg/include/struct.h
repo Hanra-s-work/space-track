@@ -44,7 +44,7 @@ typedef struct button_s {
 } btn_t;
 
 typedef struct inventory_s {
-    sfSprite *object;
+    spt_t *object;
     int x;
     int y;
     struct inventory_s *next;

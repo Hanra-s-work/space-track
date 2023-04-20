@@ -8,11 +8,11 @@
 #include <stdlib.h>
 #include "struct.h"
 
-inventory_t *add_end_list(inventory_t *list, spt_t *sprite)
+inventory_t *add_end_list(inventory_t *list, spt_t *spt)
 {
     inventory_t *new = malloc(sizeof(inventory_t));
     inventory_t *temp = NULL;
-    new->object = sprite;
+    new->object = spt;
     new->next = NULL;
     new->prev = NULL;
 

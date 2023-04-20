@@ -41,7 +41,7 @@ static void action_button_open_game(win_t *win, btn_t *btn, spt_t *spt)
         (mouse.y >= 270 && mouse.y <= 430)) {
         if (win[0].event.type == sfEvtMouseButtonPressed) {
             sfRenderWindow_close(win[0].win);
-            game_window(win, btn, spt);
+            intro_window(win, btn, spt);
         }
     }
 }

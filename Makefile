@@ -38,4 +38,4 @@ debug:
 mebug:
 	$(MAK) ./rpg/ mebug
 
-.PHONY:	re fclean clean all mac mebug
+.PHONY:	re fclean clean all mac mebug debug rac

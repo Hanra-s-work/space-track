@@ -13,11 +13,14 @@ SRC 	=	./src/main.c 							\
 			./src/windows/game/game_window.c		\
 			./src/windows/game/setting/setting_window.c		\
 			./src/windows/game/inventory_window.c		\
+			./src/windows/introduction/intro_window.c		\
 			./src/windows/create_win.c				\
 			./src/windows/create_win2.c	\
 \
 			./src/actions/action_menu_page.c		\
 			./src/actions/action_game_page.c		\
+			./src/actions/action_intro_page.c		\
+			./src/actions/action_setting_page.c		\
 \
 			./src/sprites/sprite_menu_page.c		\
 			./src/sprites/sprite_credit_page.c 	\

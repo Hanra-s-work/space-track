@@ -26,3 +26,10 @@ void draw_button_game(win_t *win, btn_t *btn)
     sfRenderWindow_drawRectangleShape(win[2].win, btn[4].rect, NULL);
     sfRenderWindow_drawRectangleShape(win[2].win, btn[8].rect, NULL);
 }
+
+void draw_button_intro(win_t *win, btn_t *btn)
+{
+    for (int i = 9; i <= 9; i++) {
+        sfRenderWindow_drawRectangleShape(win[5].win, btn[i].rect, NULL);
+    }
+}
