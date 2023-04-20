@@ -62,14 +62,14 @@ void set_button_inventory(btn_t *btn)
 
 void set_intro_rect(btn_t *btn)
 {
-    sfVector2f pos_rect = {5, 820};
+    sfVector2f pos_rect = {5, 815};
     sfVector2f size_rect = {1910, 200};
     int thickness = 3;
 
     btn[9].rect = sfRectangleShape_create();
     sfRectangleShape_setSize(btn[9].rect, size_rect);
     sfRectangleShape_setFillColor(btn[9].rect, sfTransparent);
-    sfRectangleShape_setOutlineColor(btn[9].rect, sfWhite);
+    sfRectangleShape_setOutlineColor(btn[9].rect, sfBlack);
     sfRectangleShape_setOutlineThickness(btn[9].rect, thickness);
     sfRectangleShape_setPosition(btn[9].rect, pos_rect);
 }

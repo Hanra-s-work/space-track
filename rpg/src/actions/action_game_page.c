@@ -8,7 +8,7 @@
 #include "struct.h"
 #include "rpg.h"
 
-static void action_button_setting(win_t *win, btn_t *btn, spt_t *spt)
+void action_button_setting(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt)
 {
     sfWindow *relateTo = (sfWindow *)win[2].win;
     sfVector2i mouse = sfMouse_getPosition(relateTo);
@@ -16,7 +16,7 @@ static void action_button_setting(win_t *win, btn_t *btn, spt_t *spt)
     if ((mouse.x >= 1820 && mouse.x <= 1870) &&
         (mouse.y >= 50 && mouse.y <= 100)) {
         if (win[2].event.type == sfEvtMouseButtonPressed)
-            setting_window(win, btn, spt);
+            setting_window(win, btn, spt, txt);
     }
 }
 
@@ -32,13 +32,13 @@ static void action_button_inventory(win_t *win)
     }
 }
 
-void action_game_window(win_t *win, btn_t *btn, spt_t *spt)
+void action_game_window(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt)
 {
     while (sfRenderWindow_pollEvent(win[2].win, &win[2].event)) {
         if (win[2].event.type == sfEvtClosed) {
             sfRenderWindow_close(win[2].win);
         }
-        action_button_setting(win, btn, spt);
+        action_button_setting(win, btn, spt, txt);
         action_button_inventory(win);
     }
 }

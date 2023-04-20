@@ -20,9 +20,10 @@ void destroy(win_t *win, spt_t *spt, btn_t *btn)
     sfTexture_destroy(spt[0].texture);
 }
 
-void free_struct(win_t *win, spt_t *spt, btn_t *btn)
+void free_struct(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
 {
     free(win);
     free(spt);
     free(btn);
+    free(txt);
 }

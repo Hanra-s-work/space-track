@@ -10,7 +10,7 @@
 
 void eve_sprite(spt_t *spt)
 {
-    sfVector2f pos_eve = {50, 835};
+    sfVector2f pos_eve = {30, 835};
     sfVector2f scale = {0.3f, 0.3};
     char name[100] = "./rpg/assets/sprite/eve.png";
 
@@ -23,7 +23,7 @@ void eve_sprite(spt_t *spt)
 
 void bkg_intro(spt_t *spt)
 {
-    sfVector2f pos_bkg = {5, 5};
+    sfVector2f pos_bkg = { 0, 0 };
     sfVector2f scale = {0.7f, 0.48f};
     char name[100] = "./rpg/assets/sprite/intro_back.jpg";
 

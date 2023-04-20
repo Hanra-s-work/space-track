@@ -32,11 +32,10 @@ typedef struct sprite_s {
 typedef struct text_s {
     sfText *text;
     sfFont *font;
-    char *txt;
-} text_t;
+} txt_t;
 
 typedef struct button_s {
-    text_t *txt;
+    txt_t *txt;
     sfRectangleShape *rect;
     sfVector2f scale;
     sfVector2f pos;

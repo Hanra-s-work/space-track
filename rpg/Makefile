@@ -39,6 +39,7 @@ SRC 	=	./src/main.c 							\
 		./src/parsing/map_management/set_direction.c 	\
 		./src/parsing/map_management/set_map.c 	\
 		./src/parsing/map_management/set_move.c 	\
+		./src/parsing/map_management/get_index.c 	\
 \
 		./src/inventory/add_end_list.c	\
 		./src/inventory/disp_inv.c	\
