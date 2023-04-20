@@ -11,6 +11,7 @@ SRC = 	my_putchar.c \
 		my_strlen.c \
 		my_getnbr.c \
 		my_strcmp.c \
+		my_strncmp.c \
 		my_strcpy.c \
 		my_strncpy.c \
 		my_str_to_word_array.c \

@@ -14,6 +14,8 @@ static void action_inventory_window(win_t *win)
         if (win[4].event.type == sfEvtClosed) {
             sfRenderWindow_close(win[4].win);
         }
+        if (win[4].event.key.code == sfKeyO)
+            sfRenderWindow_close(win[4].win);
     }
 }
 

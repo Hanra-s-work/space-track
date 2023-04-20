@@ -78,5 +78,6 @@ int inventory_window(win_t *win);
 void created_inventory_window(win_t *win);
 void set_pos(spt_t *brush, int x, int y);
 void set_scale(sfSprite *sp);
+int the_inv(inventory_t *list, win_t *win);
 
 #endif

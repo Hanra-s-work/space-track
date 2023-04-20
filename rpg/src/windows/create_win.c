@@ -63,7 +63,7 @@ void created_setting_window(win_t *win)
 void created_inventory_window(win_t *win)
 {
     sfUint32 sfrc = sfClose;
-    char const name[10] = "Iventory";
+    char const name[10] = "Inventory";
     sfVector2i pos_win = {0, 546};
 
     win[4].mode.width = 1920;
@@ -71,4 +71,5 @@ void created_inventory_window(win_t *win)
     win[4].mode.bitsPerPixel = 32;
     win[4].win = sfRenderWindow_create(win[4].mode, name, sfrc, NULL);
     sfRenderWindow_setPosition(win[4].win, pos_win);
+    //the_inv(inv, win);
 }
