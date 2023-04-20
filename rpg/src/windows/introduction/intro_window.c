@@ -15,10 +15,20 @@ static void all_function(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt)
 
     eve_sprite(spt);
     bkg_intro(spt);
+    profil_rick(spt);
     init_intro_text(txt);
     set_intro_rect(btn);
     fill_stat_struct(unit);
     created_intro_window(win);
+}
+
+void draw_srpite_intro(win_t *win, spt_t *spt, char **tab, int i)
+{
+    if (my_strncmp(tab[i], "Eve", 2) == 0)
+            sfRenderWindow_drawSprite(win[5].win, spt[2].sprite, NULL);
+        sfRenderWindow_drawSprite(win[5].win, spt[3].sprite, NULL);
+        if (my_strncmp(tab[i], "Player", 5) == 0)
+            sfRenderWindow_drawSprite(win[5].win, spt[4].sprite, NULL);
 }
 
 void intro_loop(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
@@ -34,10 +44,7 @@ void intro_loop(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
         sfRenderWindow_clear(win[5].win, sfWhite);
         action_intro_window(win, &i);
         draw_button_intro(win, btn);
-        sfRenderWindow_drawRectangleShape(win[5].win, btn[9].rect, NULL);
-        if (my_strncmp(tab[i], "Eve", 2) == 0)
-            sfRenderWindow_drawSprite(win[5].win, spt[2].sprite, NULL);
-        sfRenderWindow_drawSprite(win[5].win, spt[3].sprite, NULL);
+        draw_srpite_intro(win, spt, tab, i);
         sfRenderWindow_drawText(win[5].win, txt[i].text, NULL);
         sfRenderWindow_display(win[5].win);
     }

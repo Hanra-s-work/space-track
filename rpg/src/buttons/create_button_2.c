@@ -63,7 +63,7 @@ void set_button_inventory(btn_t *btn)
 void set_intro_rect(btn_t *btn)
 {
     sfVector2f pos_rect = {5, 815};
-    sfVector2f size_rect = {1910, 200};
+    sfVector2f size_rect = {1910, 210};
     int thickness = 3;
 
     btn[9].rect = sfRectangleShape_create();

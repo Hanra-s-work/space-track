@@ -71,5 +71,4 @@ void created_inventory_window(win_t *win)
     win[4].mode.bitsPerPixel = 32;
     win[4].win = sfRenderWindow_create(win[4].mode, name, sfrc, NULL);
     sfRenderWindow_setPosition(win[4].win, pos_win);
-    //the_inv(inv, win);
 }

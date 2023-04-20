@@ -46,6 +46,7 @@ void credit_page_background(spt_t *spt);
 void eve_sprite(spt_t *spt);
 void bkg_intro(spt_t *spt);
 sfRectangleShape *create_rectangle(btn_t *btn);
+void profil_rick(spt_t *spt);
 
 // create page
 void created_main_window(win_t *win, spt_t *spt);

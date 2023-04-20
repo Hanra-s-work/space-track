@@ -6,6 +6,7 @@
 */
 
 #include <stddef.h>
+#include <stdlib.h>
 #include "struct.h"
 
 int the_inv(inventory_t *list, win_t *win)
