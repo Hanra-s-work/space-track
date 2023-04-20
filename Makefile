@@ -34,8 +34,10 @@ rac: fclean mac
 
 debug:
 	$(MAK) ./rpg/ debug
+	$(MOVE) ./rpg/$(NAME) ./$(NAME)
 
 mebug:
 	$(MAK) ./rpg/ mebug
+	$(MOVE) ./rpg/$(NAME) ./$(NAME)
 
 .PHONY:	re fclean clean all mac mebug debug rac

@@ -18,11 +18,11 @@ int main(int ac, char **av)
 
     if (ac == 1 && my_strcmp(av[0], "./my_rpg") == 0) {
         if (main_window(win, spt, btn, txt) == 84) {
-            free_struct(win, spt, btn);
+            free_struct(win, spt, btn, txt);
             return 84;
         }
     }
     destroy(win, spt, btn);
-    free_struct(win, spt, btn);
+    free_struct(win, spt, btn, txt);
     return 0;
 }

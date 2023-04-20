@@ -13,7 +13,7 @@
     #include "struct.h"
 
 void destroy(win_t *win, spt_t *spt, btn_t *btn);
-void free_struct(win_t *win, spt_t *spt, btn_t *btn);
+void free_struct(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt);
 
 // window
 int main_window(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt);
