@@ -25,7 +25,7 @@ void intro_loop(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
     int i = 0;
 
     while (sfRenderWindow_isOpen(win[5].win)) {
-        if (i == 15) {
+        if (i == 16) {
             sfRenderWindow_close(win[5].win);
         }
         sfRenderWindow_clear(win[5].win, sfWhite);
