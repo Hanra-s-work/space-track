@@ -10,7 +10,7 @@
 
 void set_sprite_background(spt_t *spt)
 {
-    char name[100] = "rpg/assets/sprite/ff.jpg";
+    char name[100] = "rpg/assets/sprite/main_back.png";
 
     spt[0].texture = sfTexture_createFromFile(name, NULL);
     spt[0].sprite = sfSprite_create();
