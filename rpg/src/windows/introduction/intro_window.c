@@ -17,6 +17,7 @@ static void all_function(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt)
     bkg_intro(spt);
     profil_rick(spt);
     init_intro_text(txt);
+    init_intro_button(btn); // temporaire
     set_intro_rect(btn);
     fill_stat_struct(unit);
     created_intro_window(win);
