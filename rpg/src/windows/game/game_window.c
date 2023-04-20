@@ -8,7 +8,7 @@
 #include "struct.h"
 #include "rpg.h"
 
-int game_window(win_t *win, btn_t *btn, spt_t *spt)
+int game_window(win_t *win, btn_t *btn, spt_t *spt, inventory_t *inv)
 {
     unit_t *unit = NULL;
     fill_stat_struct(unit);
@@ -17,7 +17,7 @@ int game_window(win_t *win, btn_t *btn, spt_t *spt)
     set_button_inventory(btn);
     while (sfRenderWindow_isOpen(win[2].win)) {
         sfRenderWindow_clear(win[2].win, sfWhite);
-        action_game_window(win, btn, spt);
+        action_game_window(win, btn, spt, inv);
         draw_button_game(win, btn);
         sfRenderWindow_display(win[2].win);
     }

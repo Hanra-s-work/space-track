@@ -8,12 +8,12 @@
 #include "rpg.h"
 #include "struct.h"
 
-int setting_window(win_t *win, btn_t *btn, spt_t *spt)
+int setting_window(win_t *win, btn_t *btn, spt_t *spt, inventory_t *inv)
 {
     created_setting_window(win);
     init_setting_button(btn);
     while (sfRenderWindow_isOpen(win[3].win)) {
-        action_setting_window(win, spt, btn);
+        action_setting_window(win, spt, btn, inv);
         sfRenderWindow_clear(win[3].win, sfWhite);
         sfRenderWindow_drawRectangleShape(win[3].win, btn[5].rect, NULL);
         sfRenderWindow_drawRectangleShape(win[3].win, btn[6].rect, NULL);

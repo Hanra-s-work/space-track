@@ -17,9 +17,9 @@ static void action_inventory_window(win_t *win)
     }
 }
 
-int inventory_window(win_t *win)
+int inventory_window(win_t *win, inventory_t *inv)
 {
-    created_inventory_window(win);
+    created_inventory_window(win, inv);
     while (sfRenderWindow_isOpen(win[4].win)) {
         action_inventory_window(win);
         sfRenderWindow_clear(win[4].win, sfWhite);

@@ -8,9 +8,9 @@
 #include "struct.h"
 #include "rpg.h"
 
-void disp_inv(spt_t *sprite, inventory_t *inv, win_t win)
+void disp_inv(inventory_t *inv, win_t win)
 {
-    set_pos(sprite, inv->x, inv->y);
-    set_scale(sprite->sprite);
+    set_pos(inv->object->sprite, inv->x, inv->y);
+    set_scale(inv->object->sprite);
     sfRenderWindow_drawSprite(win.win, inv->object->sprite, NULL);
 }

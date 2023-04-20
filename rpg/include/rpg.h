@@ -18,8 +18,8 @@ void free_struct(win_t *win, spt_t *spt, btn_t *btn);
 // window
 int main_window(win_t *win, spt_t *spt, btn_t *btn);
 int credit_page(win_t *win, spt_t *spt);
-int game_window(win_t *win, btn_t *btn, spt_t *spt);
-int setting_window(win_t *win, btn_t *btn, spt_t *spt);
+int game_window(win_t *win, btn_t *btn, spt_t *spt, inventory_t *inv);
+int setting_window(win_t *win, btn_t *btn, spt_t *spt, inventory_t *inv);
 int intro_window(win_t *win, btn_t *btn, spt_t *spt);
 
 // parsing
@@ -34,8 +34,8 @@ bool set_down(char **map, int i);
 
 // action
 void action_main_window(win_t *win, spt_t *spt, btn_t *btn);
-void action_game_window(win_t *win, btn_t *btn, spt_t *spt);
-void action_setting_window(win_t *win, spt_t *spt, btn_t *btn);
+void action_game_window(win_t *win, btn_t *btn, spt_t *spt, inventory_t *inv);
+void action_setting_window(win_t *win, spt_t *spt, btn_t *btn, inventory_t *in);
 void action_intro_window(win_t *win, int *i);
 
 // sprite
@@ -72,9 +72,11 @@ void draw_button_intro(win_t *win, btn_t *btn);
 void draw_button_game(win_t *win, btn_t *btn);
 
 void set_button_inventory(btn_t *btn);
-int inventory_window(win_t *win);
-void created_inventory_window(win_t *win);
+int inventory_window(win_t *win, inventory_t *inv);
+void created_inventory_window(win_t *win, inventory_t *inv);
 void set_pos(spt_t *brush, int x, int y);
 void set_scale(sfSprite *sp);
+int the_inv(inventory_t *list, win_t win);
+void disp_inv(inventory_t *inv, win_t win);
 
 #endif
