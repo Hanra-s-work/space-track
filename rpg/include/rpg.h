@@ -34,6 +34,7 @@ bool set_down(char **map, int i);
 // action
 void action_main_window(win_t *win, spt_t *spt, btn_t *btn);
 void action_game_window(win_t *win, btn_t *btn, spt_t *spt);
+void action_intro_window(win_t *win, int *i);
 
 // sprite
 void set_sprite_background(spt_t *spt);
@@ -47,6 +48,7 @@ void created_main_window(win_t *win, spt_t *spt);
 void created_credit_window(win_t *win, spt_t *spt);
 void created_game_window(win_t *win);
 void created_setting_window(win_t *win);
+void created_intro_window(win_t *win);
 
 //init element
 void init_setting_button(btn_t *btn);

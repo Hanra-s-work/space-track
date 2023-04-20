@@ -14,6 +14,7 @@ SRC 	=	./src/main.c 							\
 			./src/windows/game/setting/setting_window.c		\
 			./src/windows/game/inventory_window.c		\
 			./src/windows/create_win.c				\
+			./src/windows/create_win2.c	\
 \
 			./src/actions/action_menu_page.c		\
 			./src/actions/action_game_page.c		\

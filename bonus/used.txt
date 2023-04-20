@@ -5,6 +5,7 @@ Struct Window
 2 : game
 3 : settings
 4 : inventory
+5 : intro
 
 Struct Sprite
 
@@ -12,6 +13,7 @@ Struct Sprite
 1 : background credit
 2 : eve
 3 : background intro
+4 : profil rick
 
 Struct text
 
