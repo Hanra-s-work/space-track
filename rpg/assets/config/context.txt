@@ -1,5 +1,5 @@
 Eve : Hello Dr.Rick, I am Eve your personal assistant. I will accompany you for the ROVER2MD mission.
-Eve : Do you want to know the origin of this mission ?
+Eve : Do you want to know the origin of this mission ?                                       "Press : Y or N"
 Eve : Before continuing your adventure, I will remind you of some events from the past to refresh your memory.
 Eve : 56 years ago, Perseverance landed on Mars.
 Eve : Today is the year 2076 and NASA has lost contact with Perseverance for reasons unknown to us.

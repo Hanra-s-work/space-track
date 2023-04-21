@@ -29,7 +29,6 @@ SRC 	=	./src/main.c 							\
 \
 			./src/buttons/create_button.c			\
 			./src/buttons/create_button_2.c			\
-			./src/buttons/create_button_3.c			\
 			./src/buttons/draw_buttons.c			\
 \
 			./src/init_elements/init_button.c		\

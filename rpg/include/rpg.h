@@ -38,7 +38,7 @@ bool set_down(char **map, int *i, int j);
 void action_main_window(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt);
 void action_game_window(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt);
 void action_setting_window(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt);
-void action_intro_window(win_t *win, int *i);
+void action_intro_window(win_t *win, btn_t *btn, txt_t *txt, int *i);
 
 // sprite
 void set_sprite_background(spt_t *spt);
@@ -71,10 +71,7 @@ void set_button_setting_quit_save(btn_t *btn);
 void set_button_setting_continue(btn_t *btn);
 void set_button_setting_restart(btn_t *btn);
 void set_intro_rect(btn_t *btn);
-void set_intro_yes_rect(btn_t *btn);
-void set_intro_no_rect(btn_t *btn);
 void draw_button(win_t *win, btn_t *btn);
-void draw_button_intro(win_t *win, btn_t *btn);
 void draw_button_game(win_t *win, btn_t *btn);
 
 void set_button_inventory(btn_t *btn);
