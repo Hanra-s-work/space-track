@@ -39,7 +39,7 @@ void intro_loop(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
     char **tab = my_str_to_word_array(intro_buffer, '\n');
 
     while (sfRenderWindow_isOpen(win[5].win)) {
-        if (i == 16) {
+        if (i == 15) {
             sfRenderWindow_close(win[5].win);
         }
         sfRenderWindow_clear(win[5].win, sfWhite);

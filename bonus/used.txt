@@ -14,10 +14,15 @@ Struct Sprite
 2 : eve
 3 : background intro
 4 : profil rick
+5 : rick_right
+6 : Game background
+7 : rick_left
+8 : rick_top
+9 : rick_down
 
 Struct text
 
-
+0 - 16 : intro
 
 Struct button
 

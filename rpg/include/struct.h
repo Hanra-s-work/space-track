@@ -12,6 +12,7 @@
     #include <SFML/Graphics/RectangleShape.h>
     #include <SFML/Graphics/Sprite.h>
     #include <SFML/Graphics/Texture.h>
+    #include <SFML/Graphics.h>
 
 typedef struct window_s {
     sfRenderWindow *win;
@@ -20,6 +21,12 @@ typedef struct window_s {
     sfImage *img;
 } win_t;
 
+typedef struct clk_s {
+    sfClock *clock;
+    sfTime time;
+    sfIntRect rect;
+    float s;
+} clk_t;
 typedef struct sprite_s {
     char *path;
     sfTexture *texture;
@@ -27,6 +34,7 @@ typedef struct sprite_s {
     sfColor pix_clr;
     sfVector2f positions;
     sfIntRect image;
+    clk_t *clk;
 } spt_t;
 
 typedef struct text_s {
@@ -41,6 +49,7 @@ typedef struct button_s {
     sfVector2f pos;
     sfColor color;
 } btn_t;
+
 
 typedef struct inventory_s {
     spt_t *object;

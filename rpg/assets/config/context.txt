@@ -1,17 +1,16 @@
 Eve : Hello Dr.Rick, I am Eve your personal assistant. I will accompany you for the ROVER2MD mission.
-Eve : Do you want to know the origin of this mission ?                                       "Press : Y or N"
-Eve : Before continuing your adventure, I will remind you of some events from the past to refresh your memory.
+Eve : Would you like to know the reason for this mission ?                                       "Press : Y or N"
+Eve : Before continuing your adventure, let me remind you some past events in order to refresh your memory.
 Eve : 56 years ago, Perseverance landed on Mars.
-Eve : Today is the year 2076 and NASA has lost contact with Perseverance for reasons unknown to us.
-Eve : Since that day, a new space mission named ROVER2MD has been set up to recover Perseverance.
+Eve : Today is the year 2076 and NASA has lost contact with Perseverance unknown reasons.
+Eve : Since that day, a new space mission, ROVER2MD, has been created in order to recover Perseverance.
 Eve : Unfortunately, you were not selected to participate in the ROVER2MD mission.
-Eve : On your end, you started plotting a lot of theories about this loss of signal.
+Eve : In the end, you started plotting a lot of theories about this loss of signal.
 Eve : It took a toll on your sanity.
-Eve : You are only waiting for one thing, it is to participate in the new space mission!
-Eve : Whether it's by force or whether you're given the mission, it doesn't matter !
+Eve : You are hoping for one thing, to participate in this new space mission !
+Eve : Whether it's willingly or by force you'll get the mission !
 Eve : You will be part of this mission, no matter what !
-Eve : Thus comes the day when NASA formalizes and finally announces the creation of the ROVER2MD mission in May 2076.
+Eve : Thus, in 2076, NASA announces the creation of the mission ROVER2MD !
 Eve : Months have passed since this announcement and today is D-Day! The rocket launch is scheduled for 5 p.m.
-Eve : Congratulations Dr.Rick! For this escape. Now we can continue our way to the moon.
-Player : Let's go for the adventure
+Player : Let's on an adventure !
 .
