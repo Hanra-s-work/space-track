@@ -45,16 +45,12 @@ typedef struct button_s {
     sfVector2f scale;
     sfVector2f pos;
     sfColor color;
-} btn_t;
-
-
-typedef struct inventory_s {
     spt_t *object;
     int x;
     int y;
     struct inventory_s *next;
     struct inventory_s *prev;
-} inventory_t;
+} btn_t;
 
 typedef struct unit_s {
     char *unit;

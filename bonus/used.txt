@@ -6,6 +6,7 @@ Struct Window
 3 : settings
 4 : inventory
 5 : intro
+6 : help
 
 Struct Sprite
 
@@ -15,10 +16,14 @@ Struct Sprite
 3 : background intro
 4 : profil rick
 5 : Game background
-6 : rick_right
+6 : rick_top
 7 : rick_left
-8 : rick_top
-9 : rick_down
+8 : rick_down
+9 : rick_right
+10 : guard_right
+11 : guard_left
+12 : guard_top
+13 : guard_down
 
 Struct text
 
@@ -36,3 +41,4 @@ Struct button
 7 : in settings -> restart
 8 : inventory
 9 : rect intro
+10 : help

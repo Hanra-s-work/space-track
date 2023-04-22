@@ -10,6 +10,8 @@
 static int move_p_i(char **map, int i)
 {
     for (int j = 0; map[i][j] != '\0'; j++) {
+        if (map[i][j] != 'P')
+            continue;
         if (map[i][j] == 'P')
             return i;
     }
@@ -19,6 +21,8 @@ static int move_p_i(char **map, int i)
 static int move_p_j(char **map, int i)
 {
     for (int j = 0; map[i][j] != '\0'; j++) {
+        if (map[i][j] != 'P')
+            continue;
         if (map[i][j] == 'P')
             return j;
     }

@@ -40,17 +40,25 @@ void action_game_window(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt);
 void action_setting_window(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt);
 void action_intro_window(win_t *win, btn_t *btn, txt_t *txt, int *i);
 
+
 // sprite
 void set_sprite_background(spt_t *spt);
 void credit_page_background(spt_t *spt);
 void eve_sprite(spt_t *spt);
 void bkg_intro(spt_t *spt);
-sfRectangleShape *create_rectangle(btn_t *btn);
 void profil_rick(spt_t *spt);
 void rick_up(spt_t *spt);
+void rick_down(spt_t *spt);
+void rick_left(spt_t *spt);
+void rick_right(spt_t *spt);
 void map_sprite(spt_t *spt);
+void guard_right(spt_t *spt);
+void set_inventory_background(spt_t *spt);
 
 //animation sprite
+void move_top_r(spt_t *spt);
+void move_down_r(spt_t *spt);
+void move_left_r(spt_t *spt);
 void move_right_r(spt_t *spt);
 
 // create page
@@ -59,6 +67,7 @@ void created_credit_window(win_t *win);
 void created_game_window(win_t *win);
 void created_setting_window(win_t *win);
 void created_intro_window(win_t *win);
+void created_help_window(win_t *win);
 
 //init element
 void init_setting_button(btn_t *btn);
@@ -75,15 +84,17 @@ void set_button_savegarde(btn_t *btn);
 void set_button_setting_quit_save(btn_t *btn);
 void set_button_setting_continue(btn_t *btn);
 void set_button_setting_restart(btn_t *btn);
+void set_button_help(btn_t *btn);
 void set_intro_rect(btn_t *btn);
 void draw_button(win_t *win, btn_t *btn);
 void draw_button_game(win_t *win, btn_t *btn);
 
 void set_button_inventory(btn_t *btn);
-int inventory_window(win_t *win);
-void created_inventory_window(win_t *win);
+int inventory_window(btn_t *list, win_t *win, spt_t *spt);
+void created_inventory_window(btn_t *inv, win_t *win);
 void set_pos(spt_t *brush, int x, int y);
 void set_scale(sfSprite *sp);
-int the_inv(inventory_t *list, win_t *win);
+int the_inv(btn_t *list, win_t *win);
+spt_t *init_srite(char *path);
 
 #endif

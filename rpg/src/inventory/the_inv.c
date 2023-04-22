@@ -9,9 +9,23 @@
 #include <stdlib.h>
 #include "struct.h"
 
-int the_inv(inventory_t *list, win_t *win)
+spt_t *init_srite(char *path)
 {
-    inventory_t *tmp = malloc(sizeof(inventory_t));
+    spt_t *sp = malloc(sizeof(spt_t));
+    sp->path = path;
+    sp->texture = sfTexture_createFromFile(path, NULL);
+    if (!sp->texture) {
+        return sp;
+    }
+    sp->sprite = sfSprite_create();
+    sfSprite_setTextureRect(sp->sprite, sp->image);
+    sfSprite_setTexture(sp->sprite, sp->texture, sfFalse);
+    return sp;
+}
+
+int the_inv(btn_t *list, win_t *win)
+{
+    btn_t *tmp = malloc(sizeof(btn_t));
     if (list == NULL) {
         return 84;
     }

@@ -8,7 +8,7 @@
 #include "struct.h"
 #include "rpg.h"
 
-void disp_inv(spt_t *sprite, inventory_t *inv, win_t *win)
+void disp_inv(spt_t *sprite, btn_t *inv, win_t *win)
 {
     set_pos(sprite, inv->x, inv->y);
     set_scale(sprite->sprite);

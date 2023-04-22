@@ -60,7 +60,7 @@ void created_setting_window(win_t *win)
     sfRenderWindow_setPosition(win[3].win, pos_win);
 }
 
-void created_inventory_window(win_t *win)
+void created_inventory_window(btn_t *inv, win_t *win)
 {
     sfUint32 sfrc = sfClose;
     char const name[10] = "Inventory";
@@ -71,4 +71,5 @@ void created_inventory_window(win_t *win)
     win[4].mode.bitsPerPixel = 32;
     win[4].win = sfRenderWindow_create(win[4].mode, name, sfrc, NULL);
     sfRenderWindow_setPosition(win[4].win, pos_win);
+    //the_inv(inv, win);
 }

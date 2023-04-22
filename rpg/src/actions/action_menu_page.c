@@ -20,6 +20,18 @@ static void action_button_quit(win_t *win)
     }
 }
 
+static void action_button_help(win_t *win)
+{
+    sfWindow *relateTo = (sfWindow *)win[0].win;
+    sfVector2i mouse = sfMouse_getPosition(relateTo);
+
+    if ((mouse.x >= 1370 && mouse.x <= 1870) &&
+        (mouse.y >= 810 && mouse.y <= 960)) {
+        if (win[0].event.type == sfEvtMouseButtonPressed)
+            sfRenderWindow_close(win[10].win);
+    }
+}
+
 static void action_button_credit(win_t *win, spt_t *spt)
 {
     sfWindow *relateTo = (sfWindow *)win[0].win;
@@ -58,4 +70,5 @@ void action_main_window(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
     action_button_open_game(win, btn, spt, txt);
     action_button_credit(win, spt);
     action_button_quit(win);
+    //action_button_help(win);
 }
