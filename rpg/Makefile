@@ -11,6 +11,7 @@ SRC 	=	./src/main.c 							\
 			./src/windows/menu/main_window.c		\
 			./src/windows/menu/credit/credit_window.c	\
 			./src/windows/game/game_window.c		\
+			./src/windows/game/move_rick.c 	\
 			./src/windows/game/setting/setting_window.c		\
 			./src/windows/game/inventory_window.c		\
 			./src/windows/introduction/intro_window.c		\

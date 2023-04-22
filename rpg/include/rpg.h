@@ -27,18 +27,21 @@ char *get_buffer(char *filepath);
 void fill_stat_struct(unit_t *unit);
 int get_i(char **map);
 int get_j(char **map);
-int set_move(char **map, int i, int j);
 char **set_map(char *filepath);
 bool set_left(char **map, int i, int *j);
 bool set_right(char **map, int i, int *j);
 bool set_up(char **map, int *i, int j);
 bool set_down(char **map, int *i, int j);
+void move_map_left(char **map, spt_t *spt, int i, int j);
+void move_map_right(char **map, spt_t *spt, int i, int j);
+void move_map_up(char **map, spt_t *spt, int i, int j);
+void move_map_down(char **map, spt_t *spt, int i, int j);
 
 // action
 void action_main_window(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt);
 void action_game_window(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt);
 void action_setting_window(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt);
-void action_intro_window(win_t *win, btn_t *btn, txt_t *txt, int *i);
+void action_intro_window(win_t *win, int *i);
 
 
 // sprite
@@ -60,6 +63,7 @@ void move_top_r(spt_t *spt);
 void move_down_r(spt_t *spt);
 void move_left_r(spt_t *spt);
 void move_right_r(spt_t *spt);
+int control_rick(spt_t *spt, char **map);
 
 // create page
 void created_main_window(win_t *win, spt_t *spt);

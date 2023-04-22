@@ -8,14 +8,14 @@
 #include "struct.h"
 #include "rpg.h"
 
-void space_condition(win_t *win, int *i)
+static void space_condition(win_t *win, int *i)
 {
     if (win[5].event.key.code == sfKeySpace) {
         (*i)++;
     }
 }
 
-void choice(win_t *win, btn_t *btn, txt_t *txt, int *i)
+static void choice(win_t *win, int *i)
 {
     if (win[5].event.key.code == sfKeyN) {
         *i = 15;
@@ -25,7 +25,7 @@ void choice(win_t *win, btn_t *btn, txt_t *txt, int *i)
     }
 }
 
-void action_intro_window(win_t *win, btn_t *btn, txt_t *txt, int *i)
+void action_intro_window(win_t *win, int *i)
 {
     while (sfRenderWindow_pollEvent(win[5].win, &win[5].event)) {
         if (*i != 1 && win[5].event.type == sfEvtClosed) {
@@ -35,7 +35,7 @@ void action_intro_window(win_t *win, btn_t *btn, txt_t *txt, int *i)
             space_condition(win, i);
         }
         if (*i == 1 && win[5].event.type == sfEvtKeyReleased) {
-            choice(win, btn, txt, i);
+            choice(win, i);
         }
     }
 }

@@ -6,7 +6,6 @@
 */
 
 #include "rpg.h"
-#include "struct.h"
 
 int setting_window(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt)
 {

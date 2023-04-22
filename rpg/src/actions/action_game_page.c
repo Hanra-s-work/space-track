@@ -8,7 +8,7 @@
 #include "struct.h"
 #include "rpg.h"
 
-void action_button_setting(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt)
+static void action_button_setting(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt)
 {
     sfWindow *relateTo = (sfWindow *)win[2].win;
     sfVector2i mouse = sfMouse_getPosition(relateTo);

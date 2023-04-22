@@ -43,7 +43,7 @@ void intro_loop(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
             sfRenderWindow_close(win[5].win);
         }
         sfRenderWindow_clear(win[5].win, sfWhite);
-        action_intro_window(win, btn, txt, &i);
+        action_intro_window(win, &i);
         sfRenderWindow_drawRectangleShape(win[5].win, btn[9].rect, NULL);
         draw_sprite_intro(win, spt, tab, i);
         sfRenderWindow_drawText(win[5].win, txt[i].text, NULL);

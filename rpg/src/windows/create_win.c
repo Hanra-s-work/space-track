@@ -44,7 +44,6 @@ void created_game_window(win_t *win)
     win[2].mode.bitsPerPixel = 32;
     win[2].win = sfRenderWindow_create(win[2].mode, name, sfrc, NULL);
     sfRenderWindow_setPosition(win[2].win, pos_win);
-
 }
 
 void created_setting_window(win_t *win)
@@ -71,5 +70,4 @@ void created_inventory_window(btn_t *inv, win_t *win)
     win[4].mode.bitsPerPixel = 32;
     win[4].win = sfRenderWindow_create(win[4].mode, name, sfrc, NULL);
     sfRenderWindow_setPosition(win[4].win, pos_win);
-    //the_inv(inv, win);
 }

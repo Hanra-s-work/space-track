@@ -9,34 +9,66 @@
 #include "constant.h"
 #include "rpg.h"
 
-bool init_left(char **map, int i, int j)
+void move_map_up(char **map, spt_t *spt, int i, int j)
 {
-    bool value = false;
+    sfVector2f vector = sfSprite_getPosition(spt[5].sprite);
 
-    value = set_left(map, i, &j);
-    return value;
+    if (set_up(map, &i, j) == true) {
+        if (map[i - 1][j] != '#' && map[i - 1][j] != ' ')
+            map[i - 1][j] = 'X';
+        else {
+            map[i][j] = 'P';
+            map[i + 1][j] = '.';
+        }
+        vector.y += 89.2f;
+        sfSprite_setPosition(spt[5].sprite, vector);
+    }
 }
 
-bool init_right(char **map, int i, int j)
+void move_map_down(char **map, spt_t *spt, int i, int j)
 {
-    bool value = false;
+    sfVector2f vector = sfSprite_getPosition(spt[5].sprite);
 
-    value = set_right(map, i, &j);
-    return value;
+    if (set_down(map, &i, j) == true) {
+        if (map[i + 1][j] != '#' && map[i - 1][j] != ' ')
+            map[i + 1][j] = 'X';
+        else {
+            map[i][j] = 'P';
+            map[i - 1][j] = '.';
+        }
+        vector.y -= 89.2f;
+        sfSprite_setPosition(spt[5].sprite, vector);
+    }
 }
 
-bool init_up(char **map, int i, int j)
+void move_map_left(char **map, spt_t *spt, int i, int j)
 {
-    bool value = false;
+    sfVector2f vector = sfSprite_getPosition(spt[5].sprite);
 
-    value = set_up(map, &i, j);
-    return value;
+    if (set_left(map, i, &j) == true) {
+        if (map[i][j - 1] != '#' && map[i - 1][j] != ' ')
+            map[i][j - 1] = 'X';
+        else {
+            map[i][j] = 'P';
+            map[i][j + 1] = '.';
+        }
+        vector.x += 91.4f;
+        sfSprite_setPosition(spt[5].sprite, vector);
+    }
 }
 
-bool init_down(char **map, int i, int j)
+void move_map_right(char **map, spt_t *spt, int i, int j)
 {
-    bool value = false;
+    sfVector2f vector = sfSprite_getPosition(spt[5].sprite);
 
-    value = set_down(map, &i, j);
-    return value;
+    if (set_right(map, i, &j) == true) {
+        if (map[i][j +1] != '#' && map[i - 1][j] != ' ')
+            map[i][j + 1] = 'X';
+        else {
+            map[i][j] = 'P';
+            map[i][j - 1] = '.';
+        }
+        vector.x -= 91.4f;
+        sfSprite_setPosition(spt[5].sprite, vector);
+    }
 }
