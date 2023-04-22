@@ -47,7 +47,7 @@ void eve_sprite(spt_t *spt);
 void bkg_intro(spt_t *spt);
 sfRectangleShape *create_rectangle(btn_t *btn);
 void profil_rick(spt_t *spt);
-void rick_right(spt_t *spt);
+void rick_up(spt_t *spt);
 void map_sprite(spt_t *spt);
 
 //animation sprite

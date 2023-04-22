@@ -14,10 +14,10 @@ void map_sprite(spt_t *spt)
     sfVector2f scale = { 4, 4 };
     char name[100] = "./rpg/assets/maps/maps/earth_map.png";
 
-    spt[6].texture = sfTexture_createFromFile(name, NULL);
-    spt[6].sprite = sfSprite_create();
+    spt[5].texture = sfTexture_createFromFile(name, NULL);
+    spt[5].sprite = sfSprite_create();
 
-    sfSprite_setTexture(spt[6].sprite, spt[6].texture, sfTrue);
-    sfSprite_setScale(spt[6].sprite, scale);
-    sfSprite_setPosition(spt[6].sprite, pos_map);
+    sfSprite_setTexture(spt[5].sprite, spt[5].texture, sfTrue);
+    sfSprite_setScale(spt[5].sprite, scale);
+    sfSprite_setPosition(spt[5].sprite, pos_map);
 }

@@ -14,8 +14,8 @@ Struct Sprite
 2 : eve
 3 : background intro
 4 : profil rick
-5 : rick_right
-6 : Game background
+5 : Game background
+6 : rick_right
 7 : rick_left
 8 : rick_top
 9 : rick_down
