@@ -21,20 +21,17 @@ typedef struct window_s {
     sfImage *img;
 } win_t;
 
-typedef struct clk_s {
-    sfClock *clock;
-    sfTime time;
-    sfIntRect rect;
-    float s;
-} clk_t;
 typedef struct sprite_s {
     char *path;
+    float s;
     sfTexture *texture;
     sfSprite *sprite;
     sfColor pix_clr;
     sfVector2f positions;
     sfIntRect image;
-    clk_t *clk;
+    sfClock *clock;
+    sfTime time;
+    sfIntRect rect;
 } spt_t;
 
 typedef struct text_s {

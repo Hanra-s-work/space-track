@@ -7,18 +7,19 @@
 
 #include "rpg.h"
 #include "struct.h"
+#include <SFML/Graphics/Sprite.h>
 
 void move_right_r(spt_t *spt)
 {
-    spt->clk->time = sfClock_getElapsedTime(spt->clk->clock);
-    spt->clk->s = spt->clk->time.microseconds / 1000000.0;
+    spt[0].time = sfClock_getElapsedTime(spt[0].clock);
+    spt[0].s = spt[0].time.microseconds / 1000000.0;
 
-    if (spt->clk->s > 0.5) {
-        if (spt->clk->rect.left > 290) {
-                spt->clk->rect.left = 0;
+    if (spt[0].s > 0.4f) {
+        if (spt[0].rect.left > 290) {
+            spt[0].rect.left = 0;
         } else {
-            spt->clk->rect.left += 280;
-            sfClock_restart(spt->clk->clock);
+            spt[0].rect.left += 280;
         }
+        sfClock_restart(spt[0].clock);
     }
 }

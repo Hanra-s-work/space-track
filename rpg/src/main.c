@@ -15,7 +15,6 @@ int main(int ac, char **av)
     spt_t *spt = malloc(sizeof(spt_t) * 20);
     btn_t *btn = malloc(sizeof(btn_t) * 20);
     txt_t *txt = malloc(sizeof(txt_t) * 20);
-    //clock_t *clk = malloc(sizeof(clock_t) * 20);
 
     if (ac == 1 && my_strcmp(av[0], "./my_rpg") == 0) {
         if (main_window(win, spt, btn, txt) == 84) {

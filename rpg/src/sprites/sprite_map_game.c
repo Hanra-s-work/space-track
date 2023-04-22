@@ -11,7 +11,7 @@
 void map_sprite(spt_t *spt)
 {
     sfVector2f pos_map = { 0, 0 };
-    sfVector2f scale = { 2, 2 };
+    sfVector2f scale = { 4, 4 };
     char name[100] = "./rpg/assets/maps/maps/earth_map.png";
 
     spt[6].texture = sfTexture_createFromFile(name, NULL);
