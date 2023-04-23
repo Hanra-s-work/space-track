@@ -8,7 +8,7 @@
 #include "struct.h"
 #include "rpg.h"
 
-static void action_button_setting(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt)
+void action_button_setting(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt)
 {
     sfWindow *relateTo = (sfWindow *)win[2].win;
     sfVector2i mouse = sfMouse_getPosition(relateTo);
@@ -16,6 +16,10 @@ static void action_button_setting(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt
     if ((mouse.x >= 1820 && mouse.x <= 1870) &&
         (mouse.y >= 50 && mouse.y <= 100)) {
         if (win[2].event.type == sfEvtMouseButtonPressed)
+            setting_window(win, btn, spt, txt);
+    }
+    if (win[2].event.type == sfEvtKeyReleased) {
+        if (win[2].event.key.code == sfKeyEscape)
             setting_window(win, btn, spt, txt);
     }
 }

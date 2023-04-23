@@ -26,6 +26,7 @@ SRC 	=	./src/main.c 							\
 			./src/sprites/sprite_menu_page.c		\
 			./src/sprites/sprite_credit_page.c 	\
 			./src/sprites/sprite_intro.c	\
+			./src/sprites/sprite_inventory.c	\
 			./src/sprites/sprite_setting.c	\
 			./src/sprites/sprite_map_game.c	\
 			./src/text/intro_text.c	\

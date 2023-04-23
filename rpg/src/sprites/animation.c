@@ -14,7 +14,7 @@ void move_top_r(spt_t *spt)
     spt[0].time = sfClock_getElapsedTime(spt[0].clock);
     spt[0].s = spt[0].time.microseconds / 1000000.0;
 
-    if (spt[0].s > 0.4f) {
+    if (spt[0].s > 0.2f) {
         if (spt[0].rect.left > 290) {
             spt[0].rect.left = 0;
         } else {
@@ -29,7 +29,7 @@ void move_down_r(spt_t *spt)
     spt[0].time = sfClock_getElapsedTime(spt[0].clock);
     spt[0].s = spt[0].time.microseconds / 1000000.0;
 
-    if (spt[0].s > 0.4f) {
+    if (spt[0].s > 0.2f) {
         if (spt[2].rect.left > 290) {
             spt[2].rect.left = 0;
         } else {
@@ -44,7 +44,7 @@ void move_left_r(spt_t *spt)
     spt[0].time = sfClock_getElapsedTime(spt[0].clock);
     spt[0].s = spt[0].time.microseconds / 1000000.0;
 
-    if (spt[0].s > 0.4f) {
+    if (spt[0].s > 0.2f) {
         if (spt[1].rect.left > 290) {
             spt[1].rect.left = 0;
         } else {
@@ -59,7 +59,7 @@ void move_right_r(spt_t *spt)
     spt[0].time = sfClock_getElapsedTime(spt[0].clock);
     spt[0].s = spt[0].time.microseconds / 1000000.0;
 
-    if (spt[0].s > 0.4f) {
+    if (spt[0].s > 0.2f) {
         if (spt[3].rect.left > 290) {
             spt[3].rect.left = 0;
         } else {

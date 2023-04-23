@@ -57,6 +57,11 @@ void rick_right(spt_t *spt);
 void map_sprite(spt_t *spt);
 void guard_right(spt_t *spt);
 void set_inventory_background(spt_t *spt);
+void set_setting_icon_sprite(spt_t *spt);
+void set_setting_continue_sprite(spt_t *spt);
+void set_setting_restart_sprite(spt_t *spt);
+void set_setting_quit_sprite(spt_t *spt);
+void set_setting_background(spt_t *spt);
 
 //animation sprite
 void move_top_r(spt_t *spt);
@@ -74,7 +79,7 @@ void created_intro_window(win_t *win);
 void created_help_window(win_t *win);
 
 //init element
-void init_setting_button(btn_t *btn);
+void init_setting_button(btn_t *btn, spt_t *spt);
 void init_intro_button(btn_t *btn);
 void init_media(btn_t *btn);
 void init_intro_text(txt_t *txt);

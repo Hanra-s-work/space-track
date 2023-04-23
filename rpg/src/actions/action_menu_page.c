@@ -70,5 +70,4 @@ void action_main_window(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
     action_button_open_game(win, btn, spt, txt);
     action_button_credit(win, spt);
     action_button_quit(win);
-    //action_button_help(win);
 }

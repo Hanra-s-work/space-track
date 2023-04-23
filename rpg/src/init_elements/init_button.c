@@ -16,11 +16,15 @@ static void init_button(btn_t *btn)
     set_button_savegarde(btn);
 }
 
-void init_setting_button(btn_t *btn)
+void init_setting_button(btn_t *btn, spt_t *spt)
 {
+    set_setting_background(spt);
     set_button_setting_continue(btn);
+    set_setting_continue_sprite(spt);
     set_button_setting_restart(btn);
+    set_setting_restart_sprite(spt);
     set_button_setting_quit_save(btn);
+    set_setting_quit_sprite(spt);
 }
 
 void init_media(btn_t *btn)
