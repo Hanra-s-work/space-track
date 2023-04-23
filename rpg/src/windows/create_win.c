@@ -70,7 +70,7 @@ void created_setting_window(win_t *win)
     sfRenderWindow_setPosition(win[3].win, pos_win);
 }
 
-void created_inventory_window(btn_t *inv, win_t *win)
+void created_inventory_window(win_t *win)
 {
     sfUint32 sfrc = sfClose;
     char const name[10] = "Inventory";

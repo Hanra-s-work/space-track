@@ -24,7 +24,7 @@ void action_button_setting(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt)
     }
 }
 
-static void action_button_inventory(btn_t *inv, win_t *win, spt_t *spt)
+static void action_button_inventory(win_t *win, spt_t *spt)
 {
     sfWindow *relateTo = (sfWindow *)win[2].win;
     sfVector2i mouse = sfMouse_getPosition(relateTo);
@@ -32,11 +32,11 @@ static void action_button_inventory(btn_t *inv, win_t *win, spt_t *spt)
     if ((mouse.x >= 50 && mouse.x <= 150) &&
         (mouse.y >= 850 && mouse.y <= 900)) {
         if (win[2].event.type == sfEvtMouseButtonPressed)
-            inventory_window(inv, win, spt);
+            inventory_window(win, spt);
     }
     if (win[2].event.type == sfEvtKeyReleased) {
         if (win[2].event.key.code == sfKeyI)
-            inventory_window(inv, win, spt);
+            inventory_window(win, spt);
     }
 }
 
@@ -47,6 +47,6 @@ void action_game_window(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt)
             sfRenderWindow_close(win[2].win);
         }
         action_button_setting(win, btn, spt, txt);
-        action_button_inventory(btn, win, spt);
+        action_button_inventory(win, spt);
     }
 }

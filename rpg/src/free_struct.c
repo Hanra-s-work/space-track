@@ -18,7 +18,7 @@ void destroy(win_t *win, spt_t *spt, btn_t *btn)
     sfRenderWindow_destroy(win[0].win);
     sfSprite_destroy(spt[0].sprite);
     sfTexture_destroy(spt[0].texture);
-    sfMusic_destroy(win[1].music);
+    sfMusic_destroy(win[0].music);
 }
 
 void free_struct(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)

@@ -102,11 +102,7 @@ void draw_button(win_t *win, btn_t *btn);
 void draw_button_game(win_t *win, btn_t *btn);
 
 void set_button_inventory(btn_t *btn);
-int inventory_window(btn_t *list, win_t *win, spt_t *spt);
-void created_inventory_window(btn_t *inv, win_t *win);
-void set_pos(spt_t *brush, int x, int y);
-void set_scale(sfSprite *sp);
-int the_inv(btn_t *list, win_t *win);
-spt_t *init_srite(char *path);
+int inventory_window(win_t *win, spt_t *spt);
+void created_inventory_window(win_t *win);
 
 #endif

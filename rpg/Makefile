@@ -50,11 +50,6 @@ SRC 	=	./src/main.c 							\
 		./src/parsing/map_management/set_map.c 	\
 		./src/parsing/map_management/set_move.c 	\
 		./src/parsing/map_management/get_index.c 	\
-\
-		./src/inventory/add_end_list.c	\
-		./src/inventory/disp_inv.c	\
-		./src/inventory/set_pos.c	\
-		./src/inventory/the_inv.c
 
 SRCMAC	=	./lib/my/my_getnbr.c	\
 			./lib/my/my_put_nbr.c	\

@@ -26,7 +26,7 @@ static void action_button_help(win_t *win, spt_t *spt, btn_t *btn)
     float mouse_x = win[0].event.mouseButton.x;
     float mouse_y = win[0].event.mouseButton.y;
 
-    if (sfFloatRect_contains(&limit, mouse_x, mouse_y)) {
+    if (sfFloatRect_contains(&limit, mouse_x, mouse_y) == sfTrue) {
         help_page(win, spt);
     }
 }
