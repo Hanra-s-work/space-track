@@ -23,7 +23,7 @@ void credit_name_sprite(spt_t *spt)
 {
     sfVector2f scale = (sfVector2f){0.04, 0.03};
     sfVector2f pos = (sfVector2f){ 280, 200 };
-    char name[100] = "rpg/assets/sprite/thomas_blanc.png";
+    char name[100] = "rpg/assets/sprite/thomas_gris.png";
 
     spt[17].texture = sfTexture_createFromFile(name, NULL);
     spt[17].sprite = sfSprite_create();

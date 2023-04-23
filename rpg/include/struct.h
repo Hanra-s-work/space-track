@@ -13,12 +13,14 @@
     #include <SFML/Graphics/Sprite.h>
     #include <SFML/Graphics/Texture.h>
     #include <SFML/Graphics.h>
+    #include <SFML/Audio.h>
 
 typedef struct window_s {
     sfRenderWindow *win;
     sfVideoMode mode;
     sfEvent event;
     sfImage *img;
+    sfMusic *music;
 } win_t;
 
 typedef struct sprite_s {

@@ -18,8 +18,6 @@ Found the Rover Perseverance
 
  -Z \
  QSD \
- -W \
- ASD
 
 ## Storyline
 

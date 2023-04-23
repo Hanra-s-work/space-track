@@ -18,6 +18,7 @@ void action_setting_quit_game(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
         if (win[3].event.type == sfEvtMouseButtonPressed) {
             sfRenderWindow_close(win[3].win);
             sfRenderWindow_close(win[2].win);
+            sfMusic_destroy(win[0].music);
             main_window(win, spt, btn, txt);
         }
     }
@@ -33,6 +34,7 @@ void action_setting_cont_rest(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
         if (win[3].event.type == sfEvtMouseButtonPressed) {
             sfRenderWindow_close(win[3].win);
             sfRenderWindow_close(win[2].win);
+            sfMusic_destroy(win[0].music);
             game_window(win, btn, spt, txt);
         }
     }
@@ -40,6 +42,7 @@ void action_setting_cont_rest(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
         (mouse.y >= 40 && mouse.y <= 190)) {
         if (win[3].event.type == sfEvtMouseButtonPressed) {
             sfRenderWindow_close(win[3].win);
+            sfMusic_play(win[0].music);
         }
     }
 }
@@ -50,6 +53,7 @@ void action_setting_window(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
         if (win[3].event.type == sfEvtClosed) {
             sfRenderWindow_close(win[3].win);
         }
+        sfMusic_pause(win[0].music);
         action_setting_quit_game(win, spt, btn, txt);
         action_setting_cont_rest(win, spt, btn, txt);
     }

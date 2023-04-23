@@ -20,7 +20,6 @@ static void action_button_quit(win_t *win)
     }
 }
 
-
 static void action_button_help(win_t *win, spt_t *spt, btn_t *btn)
 {
     sfFloatRect limit = sfRectangleShape_getGlobalBounds(btn[10].rect);
@@ -53,6 +52,7 @@ void action_button_open_game(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt)
         (mouse.y >= 270 && mouse.y <= 430)) {
         if (win[0].event.type == sfEvtMouseButtonPressed) {
             sfRenderWindow_close(win[0].win);
+            sfMusic_destroy(win[1].music);
             intro_window(win, btn, spt, txt);
         }
     }
