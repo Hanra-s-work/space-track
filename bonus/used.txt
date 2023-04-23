@@ -21,9 +21,7 @@ Struct Sprite
 8 : rick_down
 9 : rick_right
 10 : guard_right
-11 : guard_left
-12 : guard_top
-13 : guard_down
+11 : inventory
 
 Struct text
 
