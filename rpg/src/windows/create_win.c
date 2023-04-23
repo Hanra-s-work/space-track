@@ -23,7 +23,7 @@ void created_main_window(win_t *win, spt_t *spt)
     win[0].win = sfRenderWindow_create(win[0].mode, name, sfrc, NULL);
     set_sprite_background(spt);
     sfMusic_play(win[1].music);
-    sfMusic_setVolume(win[1].music, 35);
+    sfMusic_setVolume(win[1].music, 15);
 }
 
 void created_credit_window(win_t *win)
@@ -54,7 +54,7 @@ void created_game_window(win_t *win)
     win[2].win = sfRenderWindow_create(win[2].mode, name, sfrc, NULL);
     sfRenderWindow_setPosition(win[2].win, pos_win);
     sfMusic_play(win[0].music);
-    sfMusic_setVolume(win[0].music, 15);
+    sfMusic_setVolume(win[0].music, 5);
 }
 
 void created_setting_window(win_t *win)
