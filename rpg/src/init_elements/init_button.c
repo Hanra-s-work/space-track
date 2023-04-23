@@ -14,6 +14,7 @@ static void init_button(btn_t *btn)
     set_button_new_game(btn);
     set_button_quit(btn);
     set_button_savegarde(btn);
+    set_button_help(btn);
 }
 
 void init_setting_button(btn_t *btn, spt_t *spt)
@@ -25,6 +26,7 @@ void init_setting_button(btn_t *btn, spt_t *spt)
     set_setting_restart_sprite(spt);
     set_button_setting_quit_save(btn);
     set_setting_quit_sprite(spt);
+    set_button_help(btn);
 }
 
 void init_media(btn_t *btn)

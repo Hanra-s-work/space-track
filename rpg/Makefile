@@ -17,6 +17,7 @@ SRC 	=	./src/main.c 							\
 			./src/windows/introduction/intro_window.c		\
 			./src/windows/create_win.c				\
 			./src/windows/create_win2.c	\
+			./src/windows/menu/help_window.c	\
 \
 			./src/actions/action_menu_page.c		\
 			./src/actions/action_game_page.c		\
@@ -33,6 +34,7 @@ SRC 	=	./src/main.c 							\
 			./src/sprites/animation.c	\
 			./src/sprites/move_sprite_rick.c	\
 			./src/sprites/move_sprite_guard.c	\
+			./src/sprites/sprite_help_page.c	\
 \
 			./src/buttons/create_button.c			\
 			./src/buttons/create_button_2.c			\

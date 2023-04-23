@@ -21,6 +21,7 @@ int credit_page(win_t *win, spt_t *spt);
 int game_window(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt);
 int setting_window(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt);
 int intro_window(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt);
+int help_page(win_t *win, spt_t *spt);
 
 // parsing
 char *get_buffer(char *filepath);
@@ -47,6 +48,7 @@ void action_intro_window(win_t *win, int *i);
 void set_sprite_background(spt_t *spt);
 void credit_page_background(spt_t *spt);
 void credit_name_sprite(spt_t *spt);
+void help_page_background(spt_t *spt);
 void eve_sprite(spt_t *spt);
 void bkg_intro(spt_t *spt);
 void profil_rick(spt_t *spt);
@@ -62,6 +64,7 @@ void set_setting_continue_sprite(spt_t *spt);
 void set_setting_restart_sprite(spt_t *spt);
 void set_setting_quit_sprite(spt_t *spt);
 void set_setting_background(spt_t *spt);
+void help_main_sprite(spt_t *spt);
 
 //animation sprite
 void move_top_r(spt_t *spt);

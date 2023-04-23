@@ -20,15 +20,15 @@ static void action_button_quit(win_t *win)
     }
 }
 
-static void action_button_help(win_t *win)
-{
-    sfWindow *relateTo = (sfWindow *)win[0].win;
-    sfVector2i mouse = sfMouse_getPosition(relateTo);
 
-    if ((mouse.x >= 1370 && mouse.x <= 1870) &&
-        (mouse.y >= 810 && mouse.y <= 960)) {
-        if (win[0].event.type == sfEvtMouseButtonPressed)
-            sfRenderWindow_close(win[10].win);
+static void action_button_help(win_t *win, spt_t *spt, btn_t *btn)
+{
+    sfFloatRect limit = sfRectangleShape_getGlobalBounds(btn[10].rect);
+    int mouse_x = win[0].event.mouseButton.x;
+    int mouse_y = win[0].event.mouseButton.y;
+
+    if (sfFloatRect_contains(&limit, mouse_x, mouse_y)) {
+        help_page(win, spt);
     }
 }
 
@@ -69,5 +69,6 @@ void action_main_window(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt)
     }
     action_button_open_game(win, btn, spt, txt);
     action_button_credit(win, spt);
+    action_button_help(win, spt, btn);
     action_button_quit(win);
 }
