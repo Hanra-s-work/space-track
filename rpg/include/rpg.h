@@ -43,10 +43,10 @@ void action_game_window(win_t *win, btn_t *btn, spt_t *spt, txt_t *txt);
 void action_setting_window(win_t *win, spt_t *spt, btn_t *btn, txt_t *txt);
 void action_intro_window(win_t *win, int *i);
 
-
 // sprite
 void set_sprite_background(spt_t *spt);
 void credit_page_background(spt_t *spt);
+void credit_name_sprite(spt_t *spt);
 void eve_sprite(spt_t *spt);
 void bkg_intro(spt_t *spt);
 void profil_rick(spt_t *spt);

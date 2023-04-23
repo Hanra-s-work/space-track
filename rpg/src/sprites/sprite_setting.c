@@ -21,7 +21,7 @@ void set_setting_continue_sprite(spt_t *spt)
 {
     char name[100] = "./rpg/assets/sprite/continue.jpg";
 
-    spt[13].positions = (sfVector2f){20, 220};
+    spt[13].positions = (sfVector2f){20, 40};
     spt[13].texture = sfTexture_createFromFile(name, NULL);
     spt[13].sprite = sfSprite_create();
     sfSprite_setTexture(spt[13].sprite, spt[13].texture, sfTrue);
@@ -31,19 +31,21 @@ void set_setting_continue_sprite(spt_t *spt)
 void set_setting_restart_sprite(spt_t *spt)
 {
     char name[100] = "./rpg/assets/sprite/restart.jpg";
-
+    spt[14].positions = (sfVector2f){20, 220};
     spt[14].texture = sfTexture_createFromFile(name, NULL);
     spt[14].sprite = sfSprite_create();
     sfSprite_setTexture(spt[14].sprite, spt[14].texture, sfTrue);
+    sfSprite_setPosition(spt[14].sprite, spt[14].positions);
 }
 
 void set_setting_quit_sprite(spt_t *spt)
 {
     char name[100] = "./rpg/assets/sprite/quit.jpg";
-
+    spt[15].positions = (sfVector2f){20, 400};
     spt[15].texture = sfTexture_createFromFile(name, NULL);
     spt[15].sprite = sfSprite_create();
     sfSprite_setTexture(spt[15].sprite, spt[15].texture, sfTrue);
+    sfSprite_setPosition(spt[15].sprite, spt[15].positions);
 }
 
 void set_setting_background(spt_t *spt)
@@ -54,4 +56,5 @@ void set_setting_background(spt_t *spt)
     spt[16].texture = sfTexture_createFromFile(name, NULL);
     spt[16].sprite = sfSprite_create();
     sfSprite_setTexture(spt[16].sprite, spt[16].texture, sfTrue);
+    sfSprite_setScale(spt[16].sprite, scale);
 }
